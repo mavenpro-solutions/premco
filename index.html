@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREM CO - Concept to Catenary</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Link to your compiled Tailwind CSS file -->
+    <link href="./dist/output.css" rel="stylesheet">
+    
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+    <!-- SWIPER.JS CSS (ADD THIS LINK) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body class="bg-white">
+
+    <!-- HEADER (No changes here) -->
+    <header id="main-header" class="absolute top-0 left-0 right-0 z-50 transition-all duration-300">
+        <!-- ... Your existing header code ... -->
+        <!-- Main Logo Container (Centered on Desktop) -->
+        <div id="main-logo-container" class="lg:block hidden relative z-20 flex justify-center transition-all duration-300">
+            <div class="bg-white px-8 py-4 shadow-lg">
+                 <img class="h-12 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+            </div>
+        </div>
+        
+        <!-- Navigation Container -->
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center relative z-10">
+            <!-- Mobile Logo (Shows when header is not sticky) -->
+             <div class="lg:hidden flex-shrink-0">
+                <a href="#" title="PREM CO Home">
+                    <img class="h-10 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Bar -->
+            <div class="hidden lg:flex flex-grow justify-center absolute left-1/2 -translate-x-1/2 -mt-4">
+                 <nav class="bg-white rounded-lg border border-gray-200 shadow-sm px-6 py-3">
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">HOME</a></li>
+                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">ABOUT US</a></li>
+                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">SERVICES</a></li>
+                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">PROJECTS</a></li>
+                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">CAREERS</a></li>
+                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">CONTACT US</a></li>
+                    </ul>
+                 </nav>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden">
+                <button id="hamburger-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-200 md:text-gray-600 hover:text-white hover:bg-gray-700/50 focus:outline-none" aria-label="Main menu">
+                    <i class="ti ti-menu-2 h-6 w-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown (hidden by default) -->
+        <div class="lg:hidden hidden bg-white" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2 border-t">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">HOME</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">ABOUT US</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">SERVICES</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (No changes here) -->
+        <section class="mt-20 hero-bg-custom-blue relative overflow-hidden text-white px-4 py-4 pb-20">
+             <!-- This pt-32 on mobile and pt-48 on desktop creates space for the absolute header -->
+            <div class="relative z-10 container mx-auto px-6 pt-32 pb-20 lg:pt-48 lg:pb-32 flex">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                        Pioneering Rail Infrastructure & Industrial Construction with 50+ Years of Excellence
+                    </h1>
+                    
+                    <!-- Desktop Button -->
+                    <div class="mt-10 hidden lg:flex">
+                         <a href="#" class="bg-gray-100 text-blue-900 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-300 transition duration-300 ease-in-out">
+                            Speak to an Expert
+                         </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SVG Building Image Container -->
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                 <img src="./assets/images/hero-b-i.png" 
+                      alt="Buildings and Cranes Illustration" 
+                      class="absolute bottom-0 w-full max-w-lg h-auto left-1/2 -translate-x-1/2 
+                             lg:left-auto lg:right-0 lg:w-1/2 lg:max-w-3xl lg:translate-x-0">
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- ============== START: REVISED LEGACY OF EXCELLENCE SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="relative bg-white py-16 sm:py-24 overflow-hidden">
+            <!-- Decorative Background SVGs -->
+            <div class="absolute top-0 left-0 w-full h-full pointer-events-none" aria-hidden="true">
+                <!-- Mobile SVG -->
+                <div class="lg:hidden absolute top-12 -left-48">
+                    <svg width="328" height="155" viewBox="0 0 328 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="-154.183" y="6.5" width="475.308" height="141.69" rx="70.8452" stroke="url(#paint0_linear_mobile_legacy)" stroke-width="13"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_mobile_legacy" x1="327.626" y1="77.3452" x2="-160.683" y2="77.3452" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F3F4F6"/>
+                                <stop offset="1" stop-color="#294597" stop-opacity="0.2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Desktop SVG -->
+                <div class="hidden lg:block absolute top-0 -left-80">
+                    <svg width="731" height="619" viewBox="0 0 731 619" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="-279" y="29" width="981" height="561" rx="280.5" stroke="url(#paint0_linear_desktop_legacy)" stroke-width="58"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_desktop_legacy" x1="731" y1="309.5" x2="-308" y2="309.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F3F4F6" stop-opacity="0.8"/>
+                                <stop offset="1" stop-color="#294597" stop-opacity="0.4"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="relative container mx-auto px-6">
+                <!-- Main Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 lg:gap-y-0">
+                    
+                    <!-- Left Column: Title and Cards -->
+                    <div class="flex flex-col gap-10">
+                        <!-- Title Group -->
+                        <div>
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">A Legacy of Transformation</p>
+                            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-gray-900">
+                                Legacy of Nation-Building
+                                <span class="block text-5xl sm:text-6xl text-custom-accent-blue italic">Excellence</span>
+                            </h2>
+                        </div>
+                        
+                        <!-- Cards Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Card 1: 50+ Years (Spans 2 columns on sm screens and up) -->
+                            <div class="sm:col-span-2 hero-bg-custom-blue text-white p-6 rounded-xl shadow-lg flex items-center gap-4">
+                                <i class="ti ti-award text-4xl flex-shrink-0"></i>
+                                <span class="font-bold text-lg">50+ Years of Experience</span>
+                            </div>
+
+                            <!-- Card 2: Pan-India -->
+                            <div class="hero-bg-custom-blue text-white p-6 rounded-xl shadow-lg flex items-center gap-4">
+                                <i class="ti ti-map-pin-filled text-4xl flex-shrink-0"></i>
+                                <span class="font-bold text-lg">Pan-India Presence</span>
+                            </div>
+
+                            <!-- Card 3: Trusted By -->
+                            <div class="hero-bg-custom-blue text-white p-6 rounded-xl shadow-lg flex items-center gap-4">
+                                <i class="ti ti-building-shield text-4xl flex-shrink-0"></i>
+                                <span class="font-bold text-lg leading-tight">Trusted by Indian Railways & Major Industries</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Text Content -->
+                    <div class="flex items-center">
+                        <div class="text-gray-600 space-y-6 text-base leading-relaxed">
+                            <p>Premco Rail Engineers Limited is a trusted partner in rail infrastructure and industrial construction across India. With more than three decades of hands-on experience, we deliver turnkey solutions for Indian Railways and private industries, covering civil works, electrification, signaling, telecommunication, and core infrastructure with precision and innovation.</p>
+                            <p>We don’t just build projects — we revive possibilities. As specialists in reviving stalled projects, we turn complex challenges into opportunities for success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: REVISED LEGACY OF EXCELLENCE SECTION ============== -->
+        <!-- =============================================================== -->
+
+
+
+         <!-- ================================================================= -->
+        <!-- ============== START: NEW OUR EXPERTISE SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="bg-gray-50 py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900">
+                        <span class="font-serif italic text-custom-accent-blue">Our</span>
+                        Expertise
+                        <span class="font-serif italic text-custom-accent-blue">at a Glance</span>
+                    </h2>
+                </div>
+
+                <!-- Expertise Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Card 1: Rail Infrastructure -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 h-full">
+                            <div class="flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-gray-900">Rail Infrastructure Projects</h3>
+                                <p class="text-gray-600 mt-2 flex-grow">We're proud to be trusted partners of Indian Railways, providing all-encompassing solutions in civil engineering, track repairs, electrification, signaling, and telecommunication.</p>
+                                <a href="#" class="text-blue-600 font-semibold mt-4 inline-flex items-center gap-2 group">
+                                    Learn More
+                                    <i class="ti ti-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                            <div class="hero-bg-custom-blue text-white p-4 rounded-xl shadow-md flex-shrink-0">
+                                <i class="ti ti-building-railway text-4xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Private Railway Sidings -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 h-full">
+                            <div class="flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-gray-900">Private Railway Sidings</h3>
+                                <p class="text-gray-600 mt-2 flex-grow">We design and construct customized sidings for steel, power, and cement industries—streamlining cargo movement, reducing costs, and boosting efficiency for smoother operations.</p>
+                                <a href="#" class="text-blue-600 font-semibold mt-4 inline-flex items-center gap-2 group">
+                                    Learn More
+                                    <i class="ti ti-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                            <div class="hero-bg-custom-blue text-white p-4 rounded-xl shadow-md flex-shrink-0">
+                                <i class="ti ti-siding text-4xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Core Industrial Infrastructure -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 h-full">
+                            <div class="flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-gray-900">Core Industrial Infrastructure</h3>
+                                <p class="text-gray-600 mt-2 flex-grow">From factories to warehouses, we craft turnkey industrial spaces built for strength, performance, and long-term value—combining smart design with lasting durability.</p>
+                                <a href="#" class="text-blue-600 font-semibold mt-4 inline-flex items-center gap-2 group">
+                                    Learn More
+                                    <i class="ti ti-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                            <div class="hero-bg-custom-blue text-white p-4 rounded-xl shadow-md flex-shrink-0">
+                                <i class="ti ti-building-factory-2 text-4xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Stalled Project Recovery -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 h-full">
+                            <div class="flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-gray-900">Stalled Project Recovery</h3>
+                                <p class="text-gray-600 mt-2 flex-grow">When projects slow down, we bring them back to life. Our team diagnoses challenges, redefines strategies, and delivers fast, effective recovery solutions.</p>
+                                <a href="#" class="text-blue-600 font-semibold mt-4 inline-flex items-center gap-2 group">
+                                    Learn More
+                                    <i class="ti ti-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                            <div class="hero-bg-custom-blue text-white p-4 rounded-xl shadow-md flex-shrink-0">
+                                <i class="ti ti-progress-check text-4xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Consulting -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 h-full">
+                            <div class="flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-gray-900">Consulting</h3>
+                                <p class="text-gray-600 mt-2 flex-grow">Our team diagnoses challenges, redefines strategies, and delivers fast, effective recovery solutions to bring your projects back to life.</p>
+                                <a href="#" class="text-blue-600 font-semibold mt-4 inline-flex items-center gap-2 group">
+                                    Learn More
+                                    <i class="ti ti-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                            <div class="hero-bg-custom-blue text-white p-4 rounded-xl shadow-md flex-shrink-0">
+                                <i class="ti ti-users text-4xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: NEW OUR EXPERTISE SECTION ============== -->
+        <!-- =============================================================== -->
+
+          <!-- ================================================================= -->
+        <!-- ============== START: NEW WHY CHOOSE PREMCO SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="bg-subtle-blue rounded-2xl overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <!-- Left Column: Image -->
+                        <div class="relative min-h-[300px] lg:min-h-0">
+                            <img src="./assets/images/wcp-b.png" alt="Isometric illustration of a train at a station" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+
+                        <!-- Right Column: Content -->
+                        <div class="flex flex-col justify-center p-8 md:p-12">
+                            <!-- Title -->
+                            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900">
+                                Why
+                                <span class="font-serif italic text-custom-accent-blue">Choose</span>
+                                Premco
+                            </h2>
+                            
+                            <!-- List of Points -->
+                            <div class="space-y-4 mt-8">
+                                <!-- Point 1 -->
+                                <div class="bg-white rounded-lg p-4 flex items-center gap-4 shadow-sm">
+                                    <div class="bg-check-blue text-white rounded-full h-6 w-6 flex-shrink-0 flex items-center justify-center">
+                                        <i class="ti ti-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700 font-semibold">Proven track record with Indian Railways</span>
+                                </div>
+                                <!-- Point 2 -->
+                                <div class="bg-white rounded-lg p-4 flex items-center gap-4 shadow-sm">
+                                    <div class="bg-check-blue text-white rounded-full h-6 w-6 flex-shrink-0 flex items-center justify-center">
+                                        <i class="ti ti-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700 font-semibold">Expert in reviving stalled projects</span>
+                                </div>
+                                <!-- Point 3 -->
+                                <div class="bg-white rounded-lg p-4 flex items-center gap-4 shadow-sm">
+                                    <div class="bg-check-blue text-white rounded-full h-6 w-6 flex-shrink-0 flex items-center justify-center">
+                                        <i class="ti ti-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700 font-semibold">End-to-end turnkey solutions</span>
+                                </div>
+                                <!-- Point 4 -->
+                                <div class="bg-white rounded-lg p-4 flex items-center gap-4 shadow-sm">
+                                    <div class="bg-check-blue text-white rounded-full h-6 w-6 flex-shrink-0 flex items-center justify-center">
+                                        <i class="ti ti-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700 font-semibold">Rapid manpower mobilization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: NEW WHY CHOOSE PREMCO SECTION ============== -->
+        <!-- =============================================================== -->
+
+        <!-- ================================================================= -->
+        <!-- ============== START: NEW TRACK RECORD SECTION ============== -->
+        <!-- ================================================================= -->
+        <section id="track-record-section" class="relative bg-white py-16 sm:py-24 overflow-hidden">
+             <!-- Decorative Background Shape -->
+            <div class="hidden lg:block absolute top-0 -left-1/4 w-full h-full pointer-events-none" aria-hidden="true">
+                <div class="absolute top-0 left-0 w-[150%] h-[120%] rounded-[50%] border-[60px] border-gray-100 -translate-y-[20%] -translate-x-[25%]"></div>
+            </div>
+
+            <div class="relative container mx-auto px-6">
+                 <!-- Section Title -->
+                <div class="text-left mb-12 max-w-2xl">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900">
+                        Our Track
+                        <span class="font-serif italic text-custom-accent-blue">Record of Excellence</span>
+                    </h2>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Stat 1: Projects Completed -->
+                    <div class="hero-bg-custom-blue text-white p-6 rounded-xl shadow-lg text-center lg:text-left">
+                        <span class="number-counter block text-4xl font-bold" data-final-value="184" data-suffix="+">0+</span>
+                        <p class="text-gray-300 mt-1">Projects completed</p>
+                    </div>
+                    <!-- Stat 2: Kilometres of track -->
+                    <div class="hero-bg-custom-blue text-white p-6 rounded-xl shadow-lg text-center lg:text-left">
+                        <span class="number-counter block text-4xl font-bold" data-final-value="2350" data-suffix="km">0 km</span>
+                        <p class="text-gray-300 mt-1">Kilometres of track laid</p>
+                    </div>
+                    <!-- Stat 3: Electrification -->
+                    <div class="hero-bg-custom-blue text-white p-6 rounded-xl shadow-lg text-center lg:text-left">
+                        <span class="number-counter block text-4xl font-bold" data-final-value="1120" data-suffix="km">0 km</span>
+                        <p class="text-gray-300 mt-1">Electrification delivered</p>
+                    </div>
+                    <!-- Stat 4: Repeat client rate -->
+                    <div class="hero-bg-custom-blue text-white p-6 rounded-xl shadow-lg text-center lg:text-left">
+                        <span class="number-counter block text-4xl font-bold" data-final-value="73" data-suffix="%">0%</span>
+                        <p class="text-gray-300 mt-1">Repeat client rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: NEW TRACK RECORD SECTION ============== -->
+        <!-- =============================================================== -->
+
+         <!-- ================================================================= -->
+        <!-- ============== START: NEW TESTIMONIALS SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="bg-subtle-gray-blue py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                 <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900">
+                        Trusted by
+                        <span class="font-serif italic text-custom-accent-blue">Industry Leaders,</span>
+                        <br class="sm:hidden">
+                        Valued by
+                        <span class="font-serif italic text-custom-accent-blue">Partners</span>
+                    </h2>
+                </div>
+
+                <!-- Swiper Slider -->
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper py-4">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col h-full">
+                                <p class="text-gray-700 testimonial-quote flex-grow pb-2">"Their turnkey construction expertise turned our warehouse vision into reality, combining quality craftsmanship with timely execution."</p>
+                            
+                                <cite class="text-gray-500 text-sm not-italic testimonial-author">Senior Manager, Steel Plant Logistics</cite>
+                                <a href="#" class="open-modal-link text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide h-auto">
+                           <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col h-full">
+                                <p class="text-gray-700 testimonial-quote flex-grow pb-2">"Premco Rail Engineers Limited revived our long-delayed railway siding project with tremendous insight and precision. Their proactive approach minimized disruption and ensured delivery ahead of schedule."</p>
+                                
+                                <cite class="text-gray-500 text-sm not-italic testimonial-author">Operations Head, Leading Cement Manufacturer</cite>
+                                <a href="#" class="open-modal-link text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide h-auto">
+                           <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col h-full">
+                                <p class="text-gray-700 testimonial-quote flex-grow pb-2">"The Premco team’s diagnostic skills in stalled project recovery are unmatched — a true partner to trust in challenging times."</p>
+                             
+                                <cite class="text-gray-500 text-sm not-italic testimonial-author">Director, Indian Railways Consultancy Division</cite>
+                                <a href="#" class="open-modal-link text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                            </div>
+                        </div>
+
+                         <!-- Slide 4 (Duplicate for loop effect) -->
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col h-full ">
+                                <p class="text-gray-700 testimonial-quote flex-grow pb-2">"Their turnkey construction expertise turned our warehouse vision into reality, combining quality craftsmanship with timely execution."</p>
+                               
+                                <cite class=" open-modal-link text-gray-500 text-sm not-italic testimonial-author">Senior Manager, Steel Plant Logistics</cite>
+                                <a href="#" class=" text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Navigation -->
+                <div class="flex justify-center items-center gap-4 mt-8">
+                    <button class="swiper-button-prev-custom bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold p-3 rounded-lg transition-colors duration-300">
+                        <i class="ti ti-arrow-left"></i>Prev
+                    </button>
+                    <button class="swiper-button-next-custom bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold p-3 rounded-lg transition-colors duration-300">
+                        Next<i class="ti ti-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- ============== TESTIMONIAL MODAL (POPUP) ============== -->
+        <!-- =============================================================== -->
+        <div id="testimonial-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+            <!-- Overlay -->
+            <div id="modal-overlay" class="absolute inset-0 bg-black/50"></div>
+            <!-- Modal Content -->
+            <div class="relative bg-white rounded-lg shadow-xl max-w-lg w-full p-8">
+                 <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                     <i class="ti ti-x text-2xl"></i>
+                 </button>
+                 <blockquote class="text-lg text-gray-700">
+                     <p id="modal-quote">Full testimonial text will appear here.</p>
+                 </blockquote>
+                 <cite id="modal-author" class="block text-gray-500 mt-4 not-italic"></cite>
+            </div>
+        </div>
+
+
+
+              <!-- ================================================================= -->
+        <!-- ============== START: NEW SUSTAINABILITY SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                 <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900">
+                        <span class="font-serif italic text-custom-accent-blue">Sustainability & Safety</span>
+                        Commitment
+                    </h2>
+                </div>
+
+                <!-- Main Content Box -->
+                <div class="bg-sustainability-section rounded-2xl p-8 md:p-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Left Column: Illustration -->
+                        <div>
+                             <img src="./assets/images/ssc-i.png" alt="Illustration of people planting trees and caring for the environment">
+                        </div>
+
+                        <!-- Right Column: Text Slider -->
+                        <div class="relative flex items-center justify-center min-h-[250px]">
+                            <!-- Decorative SVG Background -->
+                            <div class="absolute inset-0 z-0 opacity-50" aria-hidden="true">
+                                <svg class="w-full h-full" width="747" height="486" viewBox="0 0 747 486" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 350.5C0 544.076 151.76 701 338.966 701H747V0H338.966C151.76 0 0 156.924 0 350.5Z" fill="url(#paint0_linear_245_3)" fill-opacity="0.3"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_245_3" x1="-208.249" y1="-258.668" x2="142.24" y2="717.21" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.145914" stop-color="#385DD0"/>
+                                            <stop offset="0.755502" stop-color="#E3EAFF"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+
+                            <!-- Swiper Instance -->
+                            <div class="relative z-10 swiper commitment-swiper max-w-md mx-auto">
+                                <div class="swiper-wrapper">
+                                    <!-- Slide 1 -->
+                                    <div class="swiper-slide text-center text-gray-800">
+                                        <p class="text-lg leading-relaxed">At Premco Rail Engineers Limited, safety and sustainability are at the heart of everything we do. We follow strict safety protocols to protect our workforce and ensure smooth, reliable operations.</p>
+                                    </div>
+                                    <!-- Slide 2 -->
+                                    <div class="swiper-slide text-center text-gray-800">
+                                        <p class="text-lg leading-relaxed">Our commitment extends to environmental stewardship. We actively seek eco-friendly solutions in our projects, minimizing our footprint and building a greener future for generations to come.</p>
+                                    </div>
+                                     <!-- Slide 3 -->
+                                    <div class="swiper-slide text-center text-gray-800">
+                                        <p class="text-lg leading-relaxed">By integrating sustainable practices with rigorous safety standards, we deliver projects that are not only efficient and durable but also responsible and forward-thinking.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Custom Navigation -->
+                            <button class="commitment-swiper-prev absolute left-0 z-20 bg-white/70 hover:bg-white text-gray-700 p-3 rounded-full shadow-md transition-colors">
+                                <i class="ti ti-chevron-left"></i>
+                            </button>
+                             <button class="commitment-swiper-next absolute right-0 z-20 bg-white/70 hover:bg-white text-gray-700 p-3 rounded-full shadow-md transition-colors">
+                                <i class="ti ti-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: NEW SUSTAINABILITY SECTION ============== -->
+        <!-- =============================================================== -->
+
+
+                <!-- ================================================================= -->
+        <!-- ============== START: NEW FAQ SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="bg-white py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900">
+                        <span class="font-serif italic text-custom-accent-blue">Frequently Asked Questions</span>
+                        <span class="block">About Premco</span>
+                    </h2>
+                </div>
+
+                <!-- FAQ Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
+                    <!-- Left Column -->
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 (Open by default) -->
+                        <div class="faq-item bg-white border border-gray-200 shadow-md rounded-xl transition-all duration-300">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                                <span class="font-bold text-gray-800">What is the typical timeline for rail infrastructure projects?</span>
+                                <i class="faq-icon ti ti-chevron-down text-gray-500 transform rotate-180 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 text-gray-600">
+                                <p>Timelines depend on project size and complexity, but Premco’s experienced project management ensures efficient delivery with proactive risk controls. Contact us for a customized estimate.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item bg-faq-blue border border-transparent rounded-xl transition-all duration-300">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                                <span class="font-bold text-gray-800">How does Premco handle stalled projects?</span>
+                                <i class="faq-icon ti ti-chevron-down text-gray-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 text-gray-600 hidden">
+                                <p>Our specialized project recovery team diagnoses the core issues, redefines strategies, and mobilizes resources to bring stalled projects back on track, ensuring timely and successful completion.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item bg-faq-blue border border-transparent rounded-xl transition-all duration-300">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                                <span class="font-bold text-gray-800">Do you provide turnkey solutions for industrial buildings?</span>
+                                <i class="faq-icon ti ti-chevron-down text-gray-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 text-gray-600 hidden">
+                                <p>Yes, we offer comprehensive end-to-end solutions for industrial buildings, from initial design and civil works to complete infrastructure setup, ensuring your facility is built for strength and long-term performance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-4">
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item bg-faq-blue border border-transparent rounded-xl transition-all duration-300">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                                <span class="font-bold text-gray-800">Which bulk industries do you serve for private railway sidings?</span>
+                                <i class="faq-icon ti ti-chevron-down text-gray-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 text-gray-600 hidden">
+                                <p>We serve a wide range of bulk industries, including steel, power, cement, mining, and logistics, designing and constructing customized railway sidings to streamline their cargo movement and reduce operational costs.</p>
+                            </div>
+                        </div>
+                        
+                         <!-- FAQ Item 5 -->
+                        <div class="faq-item bg-faq-blue border border-transparent rounded-xl transition-all duration-300">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                                <span class="font-bold text-gray-800">What safety standards does Premco adhere to?</span>
+                                <i class="faq-icon ti ti-chevron-down text-gray-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 text-gray-600 hidden">
+                                <p>Safety is our top priority. We adhere to all national safety regulations and international best practices, implementing strict safety protocols on-site to protect our workforce and ensure reliable, secure operations.</p>
+                            </div>
+                        </div>
+
+                         <!-- FAQ Item 6 -->
+                        <div class="faq-item bg-faq-blue border border-transparent rounded-xl transition-all duration-300">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                                <span class="font-bold text-gray-800">Can you manage projects in remote locations?</span>
+                                <i class="faq-icon ti ti-chevron-down text-gray-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 text-gray-600 hidden">
+                                <p>Absolutely. With our pan-India presence and robust logistics capabilities, we are fully equipped to manage and execute large-scale infrastructure projects in even the most remote and challenging locations across the country.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: NEW FAQ SECTION ============== -->
+        <!-- =============================================================== -->
+
+        <!-- ================================================================= -->
+        <!-- ============== START: NEW CALL TO ACTION SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="relative bg-cover bg-center rounded-2xl text-white overflow-hidden" 
+                     style="background-image: url('./assets/images/footer-banner.jpg');">
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20"></div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 p-8 md:p-12 lg:p-16">
+                        <div class="max-w-lg">
+                            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                                Fast-track your stalled rail projects — visible progress within 30 days.
+                            </h2>
+                            <a href="#" class="inline-block bg-white text-blue-900 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-200 transition-colors duration-300 mt-8">
+                                Request a Callback
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: NEW CALL TO ACTION SECTION ============== -->
+        <!-- =============================================================== -->
+
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- ============== START: NEW FOOTER SECTION ============== -->
+    <!-- ================================================================= -->
+    <footer class="bg-gray-50">
+        <div class="container mx-auto px-6 py-16">
+            <!-- Top Section Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                
+                <!-- Column 1: About -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <img class="h-24 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read More</a>
+                    </p>
+                </div>
+
+                <div></div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-gray-800">Quick Links</h3>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h3 class="font-semibold text-gray-800">Services</h3>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Rail Infrastructure</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Private Sidings</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Core Infrastructure</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Project Recovery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-gray-800">Contact Info</h3>
+                    <div class="mt-4 space-y-3 text-gray-600 text-sm">
+                        <p>1 C, Plot No 9, Block Cs, 3rd Floor, Axis Mall, Rajarhat, New Town–700156</p>
+                        <p><a href="mailto:info@premgroup.com" class="hover:text-blue-600">info@premgroup.com</a></p>
+                        <p>
+                            <span class="text-gray-500">Business Enquiry:</span>
+                            <a href="tel:8981078000" class="font-semibold text-gray-700 hover:text-blue-600">8981078000</a>
+                        </p>
+                        <p>
+                            <span class="text-gray-500">Admin Related:</span>
+                             <a href="tel:7439744141" class="font-semibold text-gray-700 hover:text-blue-600">7439744141</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <hr class="my-8 border-gray-200">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-gray-500 text-center sm:text-left">
+                    © 2025 Premco Rail Engineers Limited. All Rights Reserved.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Cookie Consent</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- =============================================================== -->
+    <!-- ============== END: NEW FOOTER SECTION ============== -->
+    <!-- =============================================================== -->    
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

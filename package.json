@@ -1,0 +1,26 @@
+{
+  "name": "premco",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000P\u0000r\u0000e\u0000m\u0000c\u0000o\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavenpro-solutions/Premco.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mavenpro-solutions/Premco/issues"
+  },
+  "homepage": "https://github.com/mavenpro-solutions/Premco#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}

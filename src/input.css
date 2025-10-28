@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Add custom styles here */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+}
+
+.hero-bg-custom-blue {
+  background-color: #294597;
+}
+
+/* Custom class for the sticky header effect */
+.header-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Add this new custom color for the heading */
+.text-custom-accent-blue {
+    color: #4a69bd; /* A lighter, softer blue for the "Excellence" text */
+}
+
+
+/* ADD THESE NEW COLORS FOR THE "WHY CHOOSE US" SECTION */
+.bg-subtle-blue {
+    background-color: #eff3ff; /* The very light blue background */
+}
+
+.bg-check-blue {
+    background-color: #25499f; /* The dark blue for the checkmark icon */
+}
+
+/* ADD THIS NEW COLOR FOR THE TESTIMONIALS SECTION */
+.bg-subtle-gray-blue {
+    background-color: #f7f8fc;
+}
+
+/* ADD THIS NEW COLOR FOR THE SUSTAINABILITY SECTION */
+.bg-sustainability-section {
+    background-color: #eef2ff; /* The very light purplish-blue background */
+}
+
+/* ADD THIS NEW COLOR FOR THE FAQ ACCORDION */
+.bg-faq-blue {
+    background-color: #eaf0ff; /* The light blue for closed FAQ items */
+}
