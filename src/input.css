@@ -1,53 +1,103 @@
 @import "tailwindcss";
 
-/* Add custom styles here */
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: white;
-}
+@theme {
+  /*
+  |--------------------------------------------------------------------------
+  | PROJECT DESIGN TOKENS
+  |--------------------------------------------------------------------------
+  */
+  --color-brand-primary: #294597;       /* The main dark blue used for hero and stats */
+  --color-brand-accent: #4a69bd;        /* Lighter blue for accented text like "Excellence" */
+  --color-brand-deep: #25499f;          /* A deeper blue used for the checkmark icon background */
+  
+  --color-bg-subtle: #eff3ff;           /* Very light blue for the "Why Choose Premco" section */
+  --color-bg-subtle-gray: #f7f8fc;     /* Very light gray-blue for the Testimonials section */
+  --color-bg-sustainability: #eef2ff;   /* Light purplish-blue for the Sustainability section */
+  --color-bg-faq: #eaf0ff;             /* Light blue for closed FAQ items */
 
-.hero-bg-custom-blue {
-  background-color: #294597;
-}
-
-/* Custom class for the sticky header effect */
-.header-scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transform: translateY(0);
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-/* Add this new custom color for the heading */
-.text-custom-accent-blue {
-    color: #4a69bd; /* A lighter, softer blue for the "Excellence" text */
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-serif: 'Playfair Display', serif;
 }
 
 
-/* ADD THESE NEW COLORS FOR THE "WHY CHOOSE US" SECTION */
-.bg-subtle-blue {
-    background-color: #eff3ff; /* The very light blue background */
+@layer base {
+  /*
+  |--------------------------------------------------------------------------
+  | BASE STYLES
+  |--------------------------------------------------------------------------
+  */
+  body {
+    @apply font-sans bg-white;
+  }
 }
 
-.bg-check-blue {
-    background-color: #25499f; /* The dark blue for the checkmark icon */
+
+@layer components {
+  /*
+  |--------------------------------------------------------------------------
+  | CUSTOM COMPONENT CLASSES
+  |--------------------------------------------------------------------------
+  */
+
+  /* Background Color Components */
+  .hero-bg-custom-blue {
+    @apply bg-brand-primary;
+  }
+  .bg-subtle-blue {
+    @apply bg-bg-subtle;
+  }
+  .bg-check-blue {
+    @apply bg-brand-deep;
+  }
+  .bg-subtle-gray-blue {
+    @apply bg-bg-subtle-gray;
+  }
+  .bg-sustainability-section {
+    @apply bg-bg-sustainability;
+  }
+  .bg-faq-blue {
+    @apply bg-bg-faq;
+  }
+
+/*
+|--------------------------------------------------------------------------
+| UNIVERSAL HEADER STYLES
+|--------------------------------------------------------------------------
+*/
+
+/* This class is added by JavaScript when you scroll */
+.header-is-sticky {
+  @apply fixed shadow-lg lg:mb-0; /* On sticky, remove negative margin */
 }
 
-/* ADD THIS NEW COLOR FOR THE TESTIMONIALS SECTION */
-.bg-subtle-gray-blue {
-    background-color: #f7f8fc;
+/* When sticky, hide the large logo container with a smooth transition */
+.header-is-sticky #logo-container {
+  @apply max-h-0 opacity-0 overflow-hidden;
 }
 
-/* ADD THIS NEW COLOR FOR THE SUSTAINABILITY SECTION */
-.bg-sustainability-section {
-    background-color: #eef2ff; /* The very light purplish-blue background */
+/* Initially, the sticky-logo is hidden on large screens */
+#sticky-logo {
+  @apply hidden lg:hidden;
 }
 
-/* ADD THIS NEW COLOR FOR THE FAQ ACCORDION */
-.bg-faq-blue {
-    background-color: #eaf0ff; /* The light blue for closed FAQ items */
+/* When the header is sticky, the sticky-logo becomes visible on large screens */
+.header-is-sticky #sticky-logo {
+  @apply lg:block;
+}
+
+/* The sticky-logo is always visible on small screens (the default state) */
+@media (max-width: 1023px) {
+  #sticky-logo {
+    @apply block;
+  }
+}
+
+}
+
+@layer utilities {
+  /*
+  |--------------------------------------------------------------------------
+  | CUSTOM UTILITY CLASSES
+  |--------------------------------------------------------------------------
+  */
 }

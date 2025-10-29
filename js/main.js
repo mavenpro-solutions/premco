@@ -1,26 +1,37 @@
 $(document).ready(function() {
 
+    
+    // ================================================================= //
+    // ============== START: UNIVERSAL HEADER LOGIC ============== //
+    // ================================================================= //
+
+    // --- Sticky Header ---
+    const header = $('#universal-header');
+    if (header.length) {
+        const scrollThreshold = 10; 
+
+        $(window).on('scroll', function() {
+            if (window.scrollY > scrollThreshold) {
+                header.addClass('header-is-sticky');
+            } else {
+                header.removeClass('header-is-sticky');
+            }
+        });
+    }
+
     // --- Mobile Menu Toggle ---
-    $('#hamburger-button').on('click', function() {
-        $('#mobile-menu').toggleClass('hidden');
-    });
+    const hamburgerButton = $('#hamburger-button');
+    const mobileMenu = $('#mobile-menu');
 
-    // --- Sticky Header Logic ---
-    const header = $('#main-header');
-    const logoContainer = $('#main-logo-container');
-    const stickyThreshold = 50; // How many pixels to scroll before the header becomes sticky
+    if (hamburgerButton.length && mobileMenu.length) {
+        hamburgerButton.on('click', function() {
+            mobileMenu.toggleClass('hidden');
+        });
+    }
 
-    $(window).on('scroll', function() {
-        // Check if the user has scrolled past the threshold
-        if ($(window).scrollTop() > stickyThreshold) {
-            header.addClass('header-scrolled');
-            logoContainer.addClass('lg:hidden'); // Hide the main logo on desktop
-        } else {
-            header.removeClass('header-scrolled');
-            logoContainer.removeClass('lg:hidden'); // Show the main logo on desktop
-        }
-    });
-
+    // =============================================================== //
+    // ============== END: UNIVERSAL HEADER LOGIC ============== //
+    // =============================================================== //
 
       // ================================================================= //
     // ============== START: NUMBER COUNTING ANIMATION CODE ============== //
@@ -123,36 +134,6 @@ const testimonialSwiper = new Swiper('.testimonial-swiper', {
 });
 
 
-// --- Modal Logic ---
-const modal = $('#testimonial-modal');
-const modalOverlay = $('#modal-overlay');
-const modalQuote = $('#modal-quote');
-const modalAuthor = $('#modal-author');
-const closeModalButton = $('#close-modal-button');
-
-// Open modal when a "Read More" link is clicked
-$('.open-modal-link').on('click', function(e) {
-    e.preventDefault();
-    const quote = $(this).siblings('p.testimonial-quote').text();
-    const author = $(this).siblings('cite.testimonial-author').text();
-
-    modalQuote.text(quote);
-    modalAuthor.text(author);
-
-    modal.removeClass('hidden');
-});
-
-// Function to close the modal
-const closeModal = () => {
-    modal.addClass('hidden');
-};
-
-// Close modal using the button or by clicking the overlay
-closeModalButton.on('click', closeModal);
-modalOverlay.on('click', closeModal);
-
-
-
 // ================================================================= //
 // ============== START: SUSTAINABILITY SLIDER CODE ============== //
 // ================================================================= //
@@ -201,6 +182,85 @@ $('.faq-toggle').on('click', function() {
 });
 // =============================================================== //
 // ============== END: FAQ ACCORDION CODE ============== //
+// =============================================================== //
+
+
+// ================================================================= //
+// ============== START: TEAM SLIDER CODE ============== //
+// ================================================================= //
+const teamSwiper = new Swiper('.team-swiper', {
+    loop: true,
+    spaceBetween: 24, // Space between slides in pixels
+
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 640px (sm)
+        640: {
+            slidesPerView: 1,
+        },
+        // when window width is >= 768px (md)
+        768: {
+            slidesPerView: 2,
+        },
+        // when window width is >= 1024px (lg)
+        1024: {
+            slidesPerView: 3,
+        }
+    },
+
+    // Custom Navigation
+    navigation: {
+        nextEl: '.team-swiper-next',
+        prevEl: '.team-swiper-prev',
+    },
+});
+// =============================================================== //
+// ============== END: TEAM SLIDER CODE ============== //
+// =============================================================== //
+
+
+// ================================================================= //
+// ============== START: STICKY NAVBAR FOR CONTACT PAGE ============== //
+// ================================================================= //
+const navbar = $('#sticky-navbar');
+
+// Check if the sticky navbar element exists on the current page
+if (navbar.length) {
+    // Get the initial top offset of the navbar
+    const stickyPoint = navbar.offset().top;
+
+    $(window).on('scroll', function() {
+        // Compare the window's scroll position to the navbar's original position
+        if (window.pageYOffset > stickyPoint) {
+            navbar.addClass('navbar-sticky');
+        } else {
+            navbar.removeClass('navbar-sticky');
+        }
+    });
+}
+// =============================================================== //
+// ============== END: STICKY NAVBAR FOR CONTACT PAGE ============== //
+// =============================================================== //
+
+
+// ================================================================= //
+// ============== START: CUSTOM FILE UPLOAD LOGIC ============== //
+// ================================================================= //
+const fileUploadInput = $('#cv-upload');
+const fileNameDisplay = $('#file-name-display');
+
+if (fileUploadInput.length && fileNameDisplay.length) {
+    fileUploadInput.on('change', function() {
+        const fileName = $(this).val().split('\\').pop(); // Get the file name
+        if (fileName) {
+            fileNameDisplay.val(fileName); // Display it in the text field
+        } else {
+            fileNameDisplay.val('Upload your CV'); // Reset if no file is chosen
+        }
+    });
+}
+// =============================================================== //
+// ============== END: CUSTOM FILE UPLOAD LOGIC ============== //
 // =============================================================== //
 
 });

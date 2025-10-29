@@ -16,24 +16,24 @@
     <!-- Tabler Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 
-    <!-- SWIPER.JS CSS (ADD THIS LINK) -->
+    <!-- SWIPER.JS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body class="bg-white">
 
-    <!-- HEADER (No changes here) -->
-    <header id="main-header" class="absolute top-0 left-0 right-0 z-50 transition-all duration-300">
-        <!-- ... Your existing header code ... -->
+    <!-- ======================= HEADER ======================= -->
+    <!-- CHANGE: Removed 'absolute' class. Header now pushes content down by default. -->
+    <header id="main-header" class="top-0 left-0 right-0 z-50 transition-all duration-300">
         <!-- Main Logo Container (Centered on Desktop) -->
-        <div id="main-logo-container" class="lg:block hidden relative z-20 flex justify-center transition-all duration-300">
-            <div class="bg-white px-8 py-4 shadow-lg">
+        <div id="main-logo-container" class="lg:block hidden relative z-20 flex justify-center transition-all duration-300 ">
+            <div class="px-8 py-4">
                  <img class="h-12 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
             </div>
         </div>
         
         <!-- Navigation Container -->
-        <div class="container mx-auto px-6 h-20 flex justify-between items-center relative z-10">
-            <!-- Mobile Logo (Shows when header is not sticky) -->
+        <div class="container mx-auto px-6 h-0 flex justify-between items-center relative z-10">
+            <!-- Mobile Logo -->
              <div class="lg:hidden flex-shrink-0">
                 <a href="#" title="PREM CO Home">
                     <img class="h-10 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
@@ -72,17 +72,18 @@
         </div>
     </header>
 
-    <main>
-        <!-- HERO SECTION (No changes here) -->
-        <section class="mt-20 hero-bg-custom-blue relative overflow-hidden text-white px-4 py-4 pb-20">
-             <!-- This pt-32 on mobile and pt-48 on desktop creates space for the absolute header -->
-            <div class="relative z-10 container mx-auto px-6 pt-32 pb-20 lg:pt-48 lg:pb-32 flex">
+    <!-- CHANGE: Added id="main-content" to the <main> tag -->
+    <main id="main-content" class="transition-all duration-300">
+        <!-- ======================= HERO SECTION ======================= -->
+        <!-- CHANGE: Removed the 'mt-20' class from the section as it is no longer needed -->
+        <section class="hero-bg-custom-blue relative overflow-hidden text-white px-4 py-4 pb-20">
+             <!-- CHANGE: Removed pt-32 and lg:pt-48. The spacing is now handled naturally. -->
+            <div class="relative z-10 container mx-auto px-6 py-20 lg:py-32 flex">
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
                         Pioneering Rail Infrastructure & Industrial Construction with 50+ Years of Excellence
                     </h1>
                     
-                    <!-- Desktop Button -->
                     <div class="mt-10 hidden lg:flex">
                          <a href="#" class="bg-gray-100 text-blue-900 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-300 transition duration-300 ease-in-out">
                             Speak to an Expert
@@ -91,7 +92,6 @@
                 </div>
             </div>
             
-            <!-- SVG Building Image Container -->
             <div class="absolute inset-0 z-0 pointer-events-none">
                  <img src="./assets/images/hero-b-i.png" 
                       alt="Buildings and Cranes Illustration" 
@@ -427,7 +427,7 @@
                                 <p class="text-gray-700 testimonial-quote flex-grow pb-2">"Their turnkey construction expertise turned our warehouse vision into reality, combining quality craftsmanship with timely execution."</p>
                             
                                 <cite class="text-gray-500 text-sm not-italic testimonial-author">Senior Manager, Steel Plant Logistics</cite>
-                                <a href="#" class="open-modal-link text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                                
                             </div>
                         </div>
 
@@ -437,7 +437,7 @@
                                 <p class="text-gray-700 testimonial-quote flex-grow pb-2">"Premco Rail Engineers Limited revived our long-delayed railway siding project with tremendous insight and precision. Their proactive approach minimized disruption and ensured delivery ahead of schedule."</p>
                                 
                                 <cite class="text-gray-500 text-sm not-italic testimonial-author">Operations Head, Leading Cement Manufacturer</cite>
-                                <a href="#" class="open-modal-link text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                                
                             </div>
                         </div>
 
@@ -447,7 +447,7 @@
                                 <p class="text-gray-700 testimonial-quote flex-grow pb-2">"The Premco team’s diagnostic skills in stalled project recovery are unmatched — a true partner to trust in challenging times."</p>
                              
                                 <cite class="text-gray-500 text-sm not-italic testimonial-author">Director, Indian Railways Consultancy Division</cite>
-                                <a href="#" class="open-modal-link text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                                
                             </div>
                         </div>
 
@@ -457,7 +457,7 @@
                                 <p class="text-gray-700 testimonial-quote flex-grow pb-2">"Their turnkey construction expertise turned our warehouse vision into reality, combining quality craftsmanship with timely execution."</p>
                                
                                 <cite class=" open-modal-link text-gray-500 text-sm not-italic testimonial-author">Senior Manager, Steel Plant Logistics</cite>
-                                <a href="#" class=" text-blue-600 text-sm font-semibold mt-2">Read More</a>
+                              
                             </div>
                         </div>
                     </div>
@@ -476,27 +476,8 @@
             </div>
         </section>
 
-        <!-- =============================================================== -->
-        <!-- ============== TESTIMONIAL MODAL (POPUP) ============== -->
-        <!-- =============================================================== -->
-        <div id="testimonial-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
-            <!-- Overlay -->
-            <div id="modal-overlay" class="absolute inset-0 bg-black/50"></div>
-            <!-- Modal Content -->
-            <div class="relative bg-white rounded-lg shadow-xl max-w-lg w-full p-8">
-                 <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-                     <i class="ti ti-x text-2xl"></i>
-                 </button>
-                 <blockquote class="text-lg text-gray-700">
-                     <p id="modal-quote">Full testimonial text will appear here.</p>
-                 </blockquote>
-                 <cite id="modal-author" class="block text-gray-500 mt-4 not-italic"></cite>
-            </div>
-        </div>
 
-
-
-              <!-- ================================================================= -->
+        <!-- ================================================================= -->
         <!-- ============== START: NEW SUSTAINABILITY SECTION ============== -->
         <!-- ================================================================= -->
         <section class="py-16 sm:py-24">

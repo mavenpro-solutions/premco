@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - PREM CO</title>
+
+    <!-- Google Fonts, CSS links, etc. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Playfair+Display:ital,wght@0;700;1,700&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+      .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- ================================================================= -->
+    <!-- ============== START: UNIVERSAL STICKY HEADER ============== -->
+    <!-- This is the same universal header used on your other pages -->
+    <header id="universal-header" class="bg-white w-full z-50 transition-all duration-300 lg:relative lg:z-50 lg:mb-[-88px]">
+        <div class="container mx-auto px-6">
+            <div id="logo-container" class="hidden lg:flex justify-center py-4 transition-all duration-300">
+                <a href="./index.html" title="PREM CO Home">
+                    <img class="h-16 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO 'Concept to Catenary' Logo" />
+                </a>
+            </div>
+            <div id="nav-bar" class="flex items-center justify-between h-20">
+                <div id="sticky-logo" class="flex-shrink-0">
+                    <a href="./index.html" title="PREM CO Home">
+                        <img class="h-12 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo" />
+                    </a>
+                </div>
+                <nav id="desktop-nav-menu" class="hidden lg:flex w-full justify-center">
+                    <ul class="flex items-center space-x-10 border border-gray-200 rounded-xl shadow-sm px-8 py-3">
+                        <li><a href="./index.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">HOME</a></li>
+                        <li><a href="./about.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">ABOUT US</a></li>
+                        <li><a href="./services.html" class="text-[color:var(--color-brand-primary)] font-semibold text-sm">SERVICES</a></li>
+                        <li><a href="./project.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">PROJECTS</a></li>
+                        <li><a href="./careers.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">CAREERS</a></li>
+                        <li><a href="./contact.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="hamburger-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100" aria-label="Main menu">
+                        <i class="ti ti-menu-2 h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="./index.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">HOME</a>
+                <a href="./about.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">ABOUT US</a>
+                <a href="./services.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 bg-gray-100">SERVICES</a>
+                <a href="./project.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">PROJECTS</a>
+                <a href="./careers.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">CAREERS</a>
+                <a href="./contact.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">CONTACT US</a>
+            </div>
+        </div>
+    </header>
+    <!-- =============================================================== -->
+    <!-- ============== END: UNIVERSAL STICKY HEADER ============== -->
+    <!-- =============================================================== -->
+
+    <!-- A spacer div to prevent content jump when the header becomes sticky -->
+    <div id="header-spacer" class="hidden"></div>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- ================================================================= -->
+        <!-- ============== START: SERVICES HERO SECTION ============== -->
+        <!-- ================================================================= -->
+        <div class="px-4 md:px-8">
+            <div class="bg-[color:var(--color-brand-primary)] rounded-2xl overflow-hidden">
+                <!-- Use a relative container to position the image -->
+                <div class="relative pt-32 pb-20 md:pt-36 md:pb-28">
+                    <div class="container mx-auto px-6 relative z-10">
+                        <div class="max-w-md text-white">
+                            <h1 class="text-6xl md:text-7xl font-bold font-serif">Our Services</h1>
+                            <p class="mt-4 text-xl md:text-2xl text-gray-200">
+                                Comprehensive turnkey solutions for rail and industrial infrastructure.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Background Illustration -->
+                    <div class="absolute bottom-0 right-0 z-0 opacity-80 pointer-events-none w-full md:w-3/4 lg:w-2/3">
+                        <!-- IMPORTANT: Replace with the actual path to your illustration -->
+                        <img src="assets/images/service-1.png" alt="Illustration of a construction site with cranes" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- =============================================================== -->
+        <!-- ============== END: SERVICES HERO SECTION ============== -->
+        <!-- =============================================================== -->
+<!-- ================================================================= -->
+<!-- ============== START: FULL SPECTRUM SERVICES SECTION ============== -->
+<!-- ================================================================= -->
+<section class="bg-white py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        <!-- Section Introduction Text -->
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                Premco Rail Engineers Limited delivers full-spectrum engineering services for Indian Railways and industrial clients from design and construction to project recovery and risk management.
+            </p>
+        </div>
+
+        <!-- Full-Width Illustration Block -->
+        <div class="flex justify-center">
+             <!-- 
+                IMPORTANT: 
+                The image below should be a single, complete graphic that includes the blue background 
+                and the white skyline illustration, saved as a PNG or SVG for the best quality.
+                Replace the src="..." with the actual path to your image.
+            -->
+            <img 
+                src="assets/images/service-2.png" 
+                alt="A blue banner with a white silhouette of a construction skyline and cranes" 
+                class="w-full max-w-8xl h-auto rounded-2xl"
+            >
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: FULL SPECTRUM SERVICES SECTION ============== -->
+<!-- =============================================================== -->
+
+<!-- ================================================================= -->
+<!-- ============== START: RAIL INFRASTRUCTURE SECTION ============== -->
+<!-- ================================================================= -->
+<section class="bg-white py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800">
+                Rail Infrastructure Projects
+            </h2>
+        </div>
+
+        <!-- Responsive Two-Column Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            
+            <!-- Left Column: Description & CTA -->
+            <div class="text-gray-600 leading-relaxed">
+                <p class="mb-4">
+                    At Premco Rail Engineers Limited, we don’t just construct railway systems — we build lifelines that connect people, industries, and progress. Premco Rail Engineers Limited leads the way in building strong and reliable rail infrastructure across India.
+                </p>
+                <p class="mb-6">
+                     Our expertise covers civil works, comprehensive electrification, advanced signaling, and telecommunication systems — seamlessly supported by strategic consultancy to ensure every project's success.
+                </p>
+                 <p class="mb-8">
+                    With a skilled team and strict focus on quality and safety, we deliver dependable solutions that keep India's rail network moving.
+                </p>
+                <a href="#" class="inline-block bg-[color:var(--color-brand-primary)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[color:var(--color-brand-deep)] transition-colors duration-300">
+                    Request a Consultation
+                </a>
+            </div>
+
+            <!-- Right Column: Key Features List -->
+            <div class="space-y-4">
+                <!-- Feature 1 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                        <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Design to commissioning</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                         <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Strict quality and safety standards</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                         <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Indian Railways expertise</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: RAIL INFRASTRUCTURE SECTION ============== -->
+<!-- =============================================================== -->
+
+<!-- ================================================================= -->
+<!-- ============== START: KEY FEATURES SECTION ============== -->
+<!-- ================================================================= -->
+<section class="bg-white py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800">
+                Key Features
+            </h2>
+        </div>
+
+        <!-- Responsive Grid for Feature Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12">
+            
+            <!-- Feature 1: Civil Work -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <i class="ti ti-building-cog text-4xl text-[color:var(--color-brand-primary)] mb-4 inline-block"></i>
+                <h3 class="font-semibold text-gray-700">Civil Work</h3>
+            </div>
+
+            <!-- Feature 2: Track -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                 <i class="ti-tracks text-4xl text-[color:var(--color-brand-primary)] mb-4 inline-block"></i>
+                <h3 class="font-semibold text-gray-700">Track</h3>
+            </div>
+
+            <!-- Feature 3: Electrification -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                 <i class="ti ti-bolt text-4xl text-[color:var(--color-brand-primary)] mb-4 inline-block"></i>
+                <h3 class="font-semibold text-gray-700">Electrification</h3>
+            </div>
+
+            <!-- Feature 4: Signaling & Telecom -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                 <i class="ti ti-broadcast text-4xl text-[color:var(--color-brand-primary)] mb-4 inline-block"></i>
+                <h3 class="font-semibold text-gray-700">Signaling & Telecom Integration</h3>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: KEY FEATURES SECTION ============== -->
+<!-- =============================================================== -->
+
+<!-- =...============================================================= -->
+<!-- ============== START: PRIVATE RAILWAY SIDINGS SECTION ============== -->
+<!-- ================================================================= -->
+<section class="bg-white py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        
+        <!-- Full-Width Illustration Block -->
+        <div class="flex justify-center mb-12">
+             <!-- 
+                IMPORTANT: 
+                The image below should be a single graphic that includes the blue background 
+                and the white train illustration, saved as a PNG or SVG for the best quality.
+                Replace the src="..." with the actual path to your image.
+            -->
+            <img 
+                src="assets/images/service-3.png" 
+                alt="A blue banner with a white silhouette of a modern train" 
+                class="w-full max-w-8xl h-auto rounded-2xl"
+            >
+        </div>
+
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800">
+                Private Railway Sidings
+            </h2>
+        </div>
+
+        <!-- Responsive Two-Column Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            
+            <!-- Left Column: Description & CTA -->
+            <div class="text-gray-600 leading-relaxed">
+                <p class="mb-6">
+                    For large-scale industries like steel plants, power stations, and cement factories, an efficient railway siding is the backbone of logistics. We offer custom-built, end-to-end siding solutions — from design and construction to seamless integration with existing rail networks.
+                </p>
+                 <p class="mb-8">
+                    Our approach minimizes transit time, eliminates bottlenecks, and boosts supply chain efficiency — giving your business a competitive edge.
+                </p>
+                <a href="#" class="inline-block bg-[color:var(--color-brand-primary)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[color:var(--color-brand-deep)] transition-colors duration-300">
+                    Get Started Today
+                </a>
+            </div>
+
+            <!-- Right Column: Key Features List -->
+            <div class="space-y-4">
+                <!-- Feature 1 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                        <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Tailored siding construction</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                         <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Integration with main lines</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                         <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Enhanced logistics efficiency</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: PRIVATE RAILWAY SIDINGS SECTION ============== -->
+<!-- =============================================================== -->
+
+<!-- =...============================================================= -->
+<!-- ============== START: PRIVATE RAILWAY SIDINGS SECTION ============== -->
+<!-- ================================================================= -->
+<section class="bg-white py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        
+        <!-- Full-Width Illustration Block -->
+        <div class="flex justify-center mb-12">
+             <!-- 
+                IMPORTANT: 
+                The image below should be a single graphic that includes the blue background 
+                and the white train illustration, saved as a PNG or SVG for the best quality.
+                Replace the src="..." with the actual path to your image.
+            -->
+            <img 
+                src="assets/images/service-3.png" 
+                alt="A blue banner with a white silhouette of a modern train" 
+                class="w-full max-w-8xl h-auto rounded-2xl"
+            >
+        </div>
+
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800">
+                Private Railway Sidings
+            </h2>
+        </div>
+
+        <!-- Responsive Two-Column Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            
+            <!-- Left Column: Description & CTA -->
+            <div class="text-gray-600 leading-relaxed">
+                <p class="mb-6">
+                    For large-scale industries like steel plants, power stations, and cement factories, an efficient railway siding is the backbone of logistics. We offer custom-built, end-to-end siding solutions — from design and construction to seamless integration with existing rail networks.
+                </p>
+                 <p class="mb-8">
+                    Our approach minimizes transit time, eliminates bottlenecks, and boosts supply chain efficiency — giving your business a competitive edge.
+                </p>
+                <a href="#" class="inline-block bg-[color:var(--color-brand-primary)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[color:var(--color-brand-deep)] transition-colors duration-300">
+                    Get Started Today
+                </a>
+            </div>
+
+            <!-- Right Column: Key Features List -->
+            <div class="space-y-4">
+                <!-- Feature 1 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                        <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Tailored siding construction</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                         <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Integration with main lines</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[color:var(--color-bg-subtle)] rounded-lg p-5 flex items-center">
+                    <div class="flex-shrink-0">
+                         <i class="ti ti-circle-check-filled text-2xl text-[color:var(--color-brand-deep)]"></i>
+                    </div>
+                    <p class="ml-4 font-semibold text-gray-800">Enhanced logistics efficiency</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: PRIVATE RAILWAY SIDINGS SECTION ============== -->
+<!-- =============================================================== -->
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - PREM CO</title>
+
+    <!-- Google Fonts, CSS links, etc. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Playfair+Display:ital,wght@0;700;1,700&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+      .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- ================================================================= -->
+    <!-- ============== START: UNIVERSAL STICKY HEADER ============== -->
+    <!-- This is the exact same header used on the contact page -->
+    <header id="universal-header" class="bg-white w-full z-50 transition-all duration-300 lg:relative lg:z-50 lg:mb-[-88px]">
+        <div class="container mx-auto px-6">
+            <div id="logo-container" class="hidden lg:flex justify-center py-4 transition-all duration-300">
+                <a href="./index.html" title="PREM CO Home">
+                    <img class="h-16 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO 'Concept to Catenary' Logo" />
+                </a>
+            </div>
+            <div id="nav-bar" class="flex items-center justify-between h-20">
+                <div id="sticky-logo" class="flex-shrink-0">
+                    <a href="./index.html" title="PREM CO Home">
+                        <img class="h-12 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo" />
+                    </a>
+                </div>
+                <nav id="desktop-nav-menu" class="hidden lg:flex w-full justify-center">
+                    <ul class="flex items-center space-x-10 border border-gray-200 rounded-xl shadow-sm px-8 py-3">
+                        <li><a href="./index.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">HOME</a></li>
+                        <li><a href="./about.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">ABOUT US</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">SERVICES</a></li>
+                        <li><a href="./project.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">PROJECTS</a></li>
+                        <li><a href="./careers.html" class="text-[color:var(--color-brand-primary)] font-semibold text-sm">CAREERS</a></li>
+                        <li><a href="./contact.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="hamburger-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100" aria-label="Main menu">
+                        <i class="ti ti-menu-2 h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="./index.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">HOME</a>
+                <!-- ... other mobile links -->
+                 <a href="./careers.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 bg-gray-100">CAREERS</a>
+                 <a href="./contact.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">CONTACT US</a>
+            </div>
+        </div>
+    </header>
+    <!-- =============================================================== -->
+    <!-- ============== END: UNIVERSAL STICKY HEADER ============== -->
+    <!-- =============================================================== -->
+
+    <!-- A spacer div to prevent content jump when the header becomes sticky -->
+    <div id="header-spacer" class="hidden"></div>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- ================================================================= -->
+        <!-- ============== START: CAREERS HERO SECTION ============== -->
+        <!-- ================================================================= -->
+        <div class="px-4 md:px-8">
+            <div class="bg-[color:var(--color-brand-primary)] rounded-2xl overflow-hidden">
+                <section class="pt-32 pb-20 md:pt-36 md:pb-28">
+                    <div class="container mx-auto px-6">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <!-- Left Column: Text -->
+                            <div class="text-white">
+                                <h1 class="text-6xl md:text-7xl font-bold font-serif">Careers at Premco</h1>
+                                <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-md">
+                                    Join the team powering India's infrastructure growth.
+                                </p>
+                            </div>
+
+                            <!-- Right Column: Image -->
+                            <div class="flex justify-center lg:justify-end">
+                                <!-- IMPORTANT: Replace with the actual path to your illustration -->
+                                <img src="assets/images/career-1.png" alt="Illustration of a construction engineer with a city skyline" class="w-full max-w-sm md:max-w-md">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- =============================================================== -->
+        <!-- ============== END: CAREERS HERO SECTION ============== -->
+        <!-- =============================================================== -->
+
+<!-- ================================================================= -->
+<!-- ============== START: WHY WORK WITH US SECTION ============== -->
+<!-- ================================================================= -->
+<section class="bg-white py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="max-w-2xl mx-auto text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+                Why Work <span class="font-serif italic text-[color:var(--color-brand-primary)]">With Us</span>
+            </h2>
+        </div>
+
+        <!-- Responsive Grid for Benefits -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            
+            <!-- Benefit 1: Growth & Learning -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 flex items-center justify-between shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <h3 class="font-semibold text-gray-800 text-lg">Growth & Learning Opportunities</h3>
+                <div class="flex-shrink-0 bg-[color:var(--color-brand-deep)] w-14 h-14 rounded-lg flex items-center justify-center shadow-md ml-4">
+                    <i class="ti ti-school text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <!-- Benefit 2: Employee Safety First -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 flex items-center justify-between shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <h3 class="font-semibold text-gray-800 text-lg">Employee Safety First</h3>
+                <div class="flex-shrink-0 bg-[color:var(--color-brand-deep)] w-14 h-14 rounded-lg flex items-center justify-center shadow-md ml-4">
+                    <i class="ti ti-shield-check text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <!-- Benefit 3: Diverse & Inclusive Culture -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 flex items-center justify-between shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <h3 class="font-semibold text-gray-800 text-lg">Diverse & Inclusive Culture</h3>
+                <div class="flex-shrink-0 bg-[color:var(--color-brand-deep)] w-14 h-14 rounded-lg flex items-center justify-center shadow-md ml-4">
+                    <i class="ti ti-users text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <!-- Benefit 4: Recognition & Rewards -->
+            <div class="bg-white border border-gray-100 rounded-xl p-6 flex items-center justify-between shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <h3 class="font-semibold text-gray-800 text-lg">Recognition & Rewards</h3>
+                <div class="flex-shrink-0 bg-[color:var(--color-brand-deep)] w-14 h-14 rounded-lg flex items-center justify-center shadow-md ml-4">
+                    <i class="ti ti-award text-white text-3xl"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: WHY WORK WITH US SECTION ============== -->
+<!-- =============================================================== -->
+
+
+<!-- ================================================================= -->
+<!-- ============== START: CURRENT OPENINGS SECTION ============== -->
+<!-- ================================================================= -->
+<section class="bg-gray-100 py-16 md:py-24">
+    <!-- Blue header part -->
+    <div class="bg-[color:var(--color-brand-primary)] mx-6 py-8 pb-36 rounded-3xl">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-white">
+                Current Openings
+            </h2>
+        </div>
+    </div>
+
+    <!-- Job cards grid -->
+    <div class="container mx-auto px-6 -mt-24 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Job Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Civil Engineer</h3>
+                    <p class="text-sm text-gray-500 mb-4">Rail Infrastructure</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">0-2 Yrs</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Pune, Maharastra</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Full Time</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">2-2.5 Lacs P.A.</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">
+                        Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                    </p>
+                </div>
+                <div class="mt-auto flex justify-between items-center">
+                    <span class="text-xs text-gray-400">2 days ago</span>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[color:var(--color-brand-primary)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-[color:var(--color-brand-deep)] transition-colors">
+                        Apply <i class="ti ti-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
+                    <p class="text-sm text-gray-500 mb-4">Industrial Projects</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">0-2 Yrs</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Ahmedabad</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Full Time</span>
+                         <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">2-2.5 Lacs P.A.</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">
+                        Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                    </p>
+                </div>
+                <div class="mt-auto flex justify-between items-center">
+                    <span class="text-xs text-gray-400">2 days ago</span>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[color:var(--color-brand-primary)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-[color:var(--color-brand-deep)] transition-colors">
+                        Apply <i class="ti ti-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Civil Engineer</h3>
+                    <p class="text-sm text-gray-500 mb-4">Electrification</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">0-2 Yrs</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Nagpur, Maharastra</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Full Time</span>
+                         <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">2-2.5 Lacs P.A.</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">
+                        Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                    </p>
+                </div>
+                <div class="mt-auto flex justify-between items-center">
+                    <span class="text-xs text-gray-400">2 days ago</span>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[color:var(--color-brand-primary)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-[color:var(--color-brand-deep)] transition-colors">
+                        Apply <i class="ti ti-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+             <!-- Job Card 4 (Duplicate) -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Civil Engineer</h3>
+                    <p class="text-sm text-gray-500 mb-4">Rail Infrastructure</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">0-2 Yrs</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Pune, Maharastra</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Full Time</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">2-2.5 Lacs P.A.</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">
+                        Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                    </p>
+                </div>
+                <div class="mt-auto flex justify-between items-center">
+                    <span class="text-xs text-gray-400">2 days ago</span>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[color:var(--color-brand-primary)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-[color:var(--color-brand-deep)] transition-colors">
+                        Apply <i class="ti ti-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+             <!-- Job Card 5 (Duplicate) -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
+                    <p class="text-sm text-gray-500 mb-4">Industrial Projects</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">0-2 Yrs</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Ahmedabad</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Full Time</span>
+                         <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">2-2.5 Lacs P.A.</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">
+                        Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                    </p>
+                </div>
+                <div class="mt-auto flex justify-between items-center">
+                    <span class="text-xs text-gray-400">2 days ago</span>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[color:var(--color-brand-primary)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-[color:var(--color-brand-deep)] transition-colors">
+                        Apply <i class="ti ti-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+             <!-- Job Card 6 (Duplicate) -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Civil Engineer</h3>
+                    <p class="text-sm text-gray-500 mb-4">Electrification</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">0-2 Yrs</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Nagpur, Maharastra</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Full Time</span>
+                         <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">2-2.5 Lacs P.A.</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">
+                        Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                    </p>
+                </div>
+                <div class="mt-auto flex justify-between items-center">
+                    <span class="text-xs text-gray-400">2 days ago</span>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[color:var(--color-brand-primary)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-[color:var(--color-brand-deep)] transition-colors">
+                        Apply <i class="ti ti-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: CURRENT OPENINGS SECTION ============== -->
+<!-- =============================================================== -->
+
+<!-- ================================================================= -->
+<!-- ============== START: SUBMIT RESUME FORM SECTION ============== -->
+<!-- ================================================================= -->
+<section class.="bg-white py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+                Didn't find your role? 
+                <span class="font-serif italic text-[color:var(--color-brand-primary)]">We'd still love to hear from you.</span>
+            </h2>
+        </div>
+
+        <!-- Form Container -->
+        <div class="max-w-3xl mx-auto">
+            <form action="#" method="POST">
+                <!-- Name Fields -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <input type="text" name="first-name" placeholder="First Name" class="w-full bg-gray-100 border-transparent rounded-lg px-4 py-3 focus:ring-2 focus:ring-[color:var(--color-brand-accent)] transition">
+                    <input type="text" name="last-name" placeholder="Last Name" class="w-full bg-gray-100 border-transparent rounded-lg px-4 py-3 focus:ring-2 focus:ring-[color:var(--color-brand-accent)] transition">
+                </div>
+
+                <!-- Email & Phone -->
+                <div class="mt-6">
+                    <input type="email" name="email" placeholder="Email" class="w-full bg-gray-100 border-transparent rounded-lg px-4 py-3 focus:ring-2 focus:ring-[color:var(--color-brand-accent)] transition">
+                </div>
+                <div class="mt-6">
+                    <input type="tel" name="phone-number" placeholder="Phone Number" class="w-full bg-gray-100 border-transparent rounded-lg px-4 py-3 focus:ring-2 focus:ring-[color:var(--color-brand-accent)] transition">
+                </div>
+                 <div class="mt-6">
+                    <input type="text" name="department" placeholder="Department" class="w-full bg-gray-100 border-transparent rounded-lg px-4 py-3 focus:ring-2 focus:ring-[color:var(--color-brand-accent)] transition">
+                </div>
+
+                <!-- Custom File Upload -->
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-700 sr-only">Upload your CV</label>
+                    <div class="relative flex items-center bg-gray-100 rounded-lg">
+                        <input type="text" id="file-name-display" placeholder="Upload your CV" class="w-full bg-transparent border-transparent rounded-lg px-4 py-3 flex-grow" readonly>
+                        <label for="cv-upload" class="cursor-pointer bg-[color:var(--color-brand-primary)] text-white font-semibold py-3 px-6 rounded-r-lg hover:bg-[color:var(--color-brand-deep)] transition-colors whitespace-nowrap">
+                            Choose File
+                        </label>
+                        <input id="cv-upload" name="cv-upload" type="file" class="hidden">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-8 text-center">
+                    <button type="submit" class="inline-block bg-[color:var(--color-brand-primary)] text-white font-semibold py-3 px-10 rounded-lg shadow-md hover:bg-[color:var(--color-brand-deep)] transition-colors duration-300">
+                        Submit Resume
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: SUBMIT RESUME FORM SECTION ============== -->
+<!-- =============================================================== -->
+       <!-- ================================================================= -->
+        <!-- ============== START: NEW CALL TO ACTION SECTION ============== -->
+        <!-- ================================================================= -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="relative bg-cover bg-center rounded-2xl text-white overflow-hidden" 
+                     style="background-image: url('./assets/images/footer-banner.jpg');">
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20"></div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 p-8 md:p-12 lg:p-16">
+                        <div class="max-w-lg">
+                            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                                Fast-track your stalled rail projects — visible progress within 30 days.
+                            </h2>
+                            <a href="#" class="inline-block bg-white text-blue-900 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-200 transition-colors duration-300 mt-8">
+                                Request a Callback
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== -->
+        <!-- ============== END: NEW CALL TO ACTION SECTION ============== -->
+        <!-- =============================================================== -->
+
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- ============== START: NEW FOOTER SECTION ============== -->
+    <!-- ================================================================= -->
+    <footer class="bg-gray-50">
+        <div class="container mx-auto px-6 py-16">
+            <!-- Top Section Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                
+                <!-- Column 1: About -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <img class="h-24 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read More</a>
+                    </p>
+                </div>
+
+                <div></div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-gray-800">Quick Links</h3>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h3 class="font-semibold text-gray-800">Services</h3>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Rail Infrastructure</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Private Sidings</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Core Infrastructure</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Project Recovery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-gray-800">Contact Info</h3>
+                    <div class="mt-4 space-y-3 text-gray-600 text-sm">
+                        <p>1 C, Plot No 9, Block Cs, 3rd Floor, Axis Mall, Rajarhat, New Town–700156</p>
+                        <p><a href="mailto:info@premgroup.com" class="hover:text-blue-600">info@premgroup.com</a></p>
+                        <p>
+                            <span class="text-gray-500">Business Enquiry:</span>
+                            <a href="tel:8981078000" class="font-semibold text-gray-700 hover:text-blue-600">8981078000</a>
+                        </p>
+                        <p>
+                            <span class="text-gray-500">Admin Related:</span>
+                             <a href="tel:7439744141" class="font-semibold text-gray-700 hover:text-blue-600">7439744141</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <hr class="my-8 border-gray-200">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-gray-500 text-center sm:text-left">
+                    © 2025 Premco Rail Engineers Limited. All Rights Reserved.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Cookie Consent</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- =============================================================== -->
+    <!-- ============== END: NEW FOOTER SECTION ============== -->
+    <!-- =============================================================== -->    
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
