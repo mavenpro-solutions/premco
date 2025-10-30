@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PREM CO - Concept to Catenary</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PREM CO - Rail Infrastructure & Industrial Construction</title>
+		<link href="./output.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+		/>
+	</head>
+	<body class="bg-gray-100">
+		<!-- Header -->
+		<header id="main-header" class="absolute top-0 left-0 w-full z-50">
+			<!-- Top bar with Logo -->
+			<div id="top-bar" class="bg-white py-4 transition-transform duration-300">
+				<div class="container mx-auto px-4">
+					<div class="flex justify-center">
+						<a href="#" title="PREM CO Logo">
+							<img
+								class="h-12 w-auto"
+								src="assets/images/logo/logo.png"
+								alt="PREM CO"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    
-    <!-- Link to your compiled Tailwind CSS file -->
-    <link href="./dist/output.css" rel="stylesheet">
-    
-    <!-- Tabler Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+			<!-- Main Navigation for Desktop -->
+			<nav id="desktop-nav-wrapper" class="container mx-auto px-4 hidden md:block transition-all duration-300">
+				<div
+					id="desktop-nav"
+					class="bg-white rounded-md shadow-lg max-w-7xl mx-auto mt-4 transition-all duration-300"
+				>
+					<ul
+						class="flex justify-center items-center space-x-8 text-gray-800 font-semibold py-4"
+					>
+						<li><a href="#" class="hover:text-brand-blue">HOME</a></li>
+						<li><a href="#" class="hover:text-brand-blue">ABOUT US</a></li>
+						<li><a href="#" class="hover:text-brand-blue">SERVICES</a></li>
+						<li><a href="#" class="hover:text-brand-blue">PROJECTS</a></li>
+						<li><a href="#" class="hover:text-brand-blue">CAREERS</a></li>
+						<li><a href="#" class="hover:text-brand-blue">CONTACT US</a></li>
+					</ul>
+				</div>
+			</nav>
 
-    <!-- SWIPER.JS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-</head>
-<body class="bg-white">
+			<!-- Mobile Header -->
+			<div
+				id="mobile-header"
+				class="md:hidden bg-white shadow-md p-4 flex items-center justify-between fixed top-0 w-full"
+			>
+				<a href="#" title="PREM CO Logo">
+					<img class="h-10 w-auto" src="assets/images/logo/logo.png" alt="PREM CO" />
+				</a>
+				<button type="button" id="mobile-menu-button" class="p-2">
+					<span class="sr-only">Open main menu</span>
+					<i class="ti ti-menu-2 h-6 w-6"></i>
+				</button>
+			</div>
+		</header>
 
-    <!-- ======================= HEADER ======================= -->
-    <!-- CHANGE: Removed 'absolute' class. Header now pushes content down by default. -->
-    <header id="main-header" class="top-0 left-0 right-0 z-50 transition-all duration-300">
-        <!-- Main Logo Container (Centered on Desktop) -->
-        <div id="main-logo-container" class="lg:block hidden relative z-20 flex justify-center transition-all duration-300 ">
-            <div class="px-8 py-4">
-                 <img class="h-12 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
-            </div>
-        </div>
-        
-        <!-- Navigation Container -->
-        <div class="container mx-auto px-6 h-0 flex justify-between items-center relative z-10">
-            <!-- Mobile Logo -->
-             <div class="lg:hidden flex-shrink-0">
-                <a href="#" title="PREM CO Home">
-                    <img class="h-10 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
-                </a>
-            </div>
-
-            <!-- Desktop Navigation Bar -->
-            <div class="hidden lg:flex flex-grow justify-center absolute left-1/2 -translate-x-1/2 -mt-4">
-                 <nav class="bg-white rounded-lg border border-gray-200 shadow-sm px-6 py-3">
-                    <ul class="flex items-center space-x-8">
-                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">HOME</a></li>
-                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">ABOUT US</a></li>
-                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">SERVICES</a></li>
-                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">PROJECTS</a></li>
-                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">CAREERS</a></li>
-                        <li><a href="#" class="text-gray-800 hover:text-blue-700 tracking-wider text-sm font-semibold">CONTACT US</a></li>
-                    </ul>
-                 </nav>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="lg:hidden">
-                <button id="hamburger-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-200 md:text-gray-600 hover:text-white hover:bg-gray-700/50 focus:outline-none" aria-label="Main menu">
-                    <i class="ti ti-menu-2 h-6 w-6"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown (hidden by default) -->
-        <div class="lg:hidden hidden bg-white" id="mobile-menu">
-            <div class="px-4 pt-2 pb-4 space-y-2 border-t">
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">HOME</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">ABOUT US</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">SERVICES</a>
-            </div>
-        </div>
-    </header>
+		<!-- Mobile Menu Panel -->
+		<div id="mobile-menu" class="hidden md:hidden fixed top-[72px] w-full bg-white z-40 shadow-lg">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<a href="#" class="mobile-menu-link">HOME</a>
+				<a href="#" class="mobile-menu-link">ABOUT US</a>
+				<a href="#" class="mobile-menu-link">SERVICES</a>
+				<a href="#" class="mobile-menu-link">PROJECTS</a>
+				<a href="#" class="mobile-menu-link">CAREERS</a>
+				<a href="#" class="mobile-menu-link">CONTACT US</a>
+			</div>
+		</div>
 
     <!-- CHANGE: Added id="main-content" to the <main> tag -->
     <main id="main-content" class="transition-all duration-300">
         <!-- ======================= HERO SECTION ======================= -->
         <!-- CHANGE: Removed the 'mt-20' class from the section as it is no longer needed -->
-        <section class="hero-bg-custom-blue relative overflow-hidden text-white px-4 py-4 pb-20">
+        <section class="bg-brand-blue relative overflow-hidden text-white px-4 py-4 pb-20">
              <!-- CHANGE: Removed pt-32 and lg:pt-48. The spacing is now handled naturally. -->
             <div class="relative z-10 container mx-auto px-6 py-20 lg:py-32 flex">
                 <div class="w-full lg:w-1/2 text-center lg:text-left">

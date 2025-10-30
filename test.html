@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PREM CO - Rail Infrastructure & Industrial Construction</title>
+		<link href="./output.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+		/>
+	</head>
+	<body class="bg-gray-100">
+		<!-- Header -->
+		<header id="main-header" class="absolute top-0 left-0 w-full z-50">
+			<!-- Top bar with Logo -->
+			<div id="top-bar" class="bg-white py-4 transition-transform duration-300">
+				<div class="container mx-auto px-4">
+					<div class="flex justify-center">
+						<a href="#" title="PREM CO Logo">
+							<img
+								class="h-12 w-auto"
+								src="https://i.imgur.com/r82s38H.png"
+								alt="PREM CO"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Navigation for Desktop -->
+			<nav id="desktop-nav-wrapper" class="container mx-auto px-4 hidden md:block transition-all duration-300">
+				<div
+					id="desktop-nav"
+					class="bg-white rounded-md shadow-lg max-w-7xl mx-auto mt-4 transition-all duration-300"
+				>
+					<ul
+						class="flex justify-center items-center space-x-8 text-gray-800 font-semibold py-4"
+					>
+						<li><a href="#" class="hover:text-brand-blue">HOME</a></li>
+						<li><a href="#" class="hover:text-brand-blue">ABOUT US</a></li>
+						<li><a href="#" class="hover:text-brand-blue">SERVICES</a></li>
+						<li><a href="#" class="hover:text-brand-blue">PROJECTS</a></li>
+						<li><a href="#" class="hover:text-brand-blue">CAREERS</a></li>
+						<li><a href="#" class="hover:text-brand-blue">CONTACT US</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- Mobile Header -->
+			<div
+				id="mobile-header"
+				class="md:hidden bg-white shadow-md p-4 flex items-center justify-between fixed top-0 w-full"
+			>
+				<a href="#" title="PREM CO Logo">
+					<img class="h-10 w-auto" src="https://i.imgur.com/r82s38H.png" alt="PREM CO" />
+				</a>
+				<button type="button" id="mobile-menu-button" class="p-2">
+					<span class="sr-only">Open main menu</span>
+					<i class="ti ti-menu-2 h-6 w-6"></i>
+				</button>
+			</div>
+		</header>
+
+		<!-- Mobile Menu Panel -->
+		<div id="mobile-menu" class="hidden md:hidden fixed top-[72px] w-full bg-white z-40 shadow-lg">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<a href="#" class="mobile-menu-link">HOME</a>
+				<a href="#" class="mobile-menu-link">ABOUT US</a>
+				<a href="#" class="mobile-menu-link">SERVICES</a>
+				<a href="#" class="mobile-menu-link">PROJECTS</a>
+				<a href="#" class="mobile-menu-link">CAREERS</a>
+				<a href="#" class="mobile-menu-link">CONTACT US</a>
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<main>
+			<!-- Hero Section -->
+			<section class="relative bg-brand-blue text-white pt-48 pb-20 md:pt-56 md:pb-32">
+				<!-- Background Graphic -->
+				<div class="absolute inset-0 bg-no-repeat bg-cover bg-center" style="background-image: url('https://i.imgur.com/wWwDBDo.png');"></div>
+				<div class="absolute inset-0 bg-brand-blue/90"></div>
+
+				<!-- Hero Content -->
+				<div class="relative container mx-auto px-4">
+					<div class="max-w-3xl">
+						<h1 class="text-4xl md:text-6xl font-bold leading-tight">
+							Pioneering Rail Infrastructure & Industrial Construction with 50+ Years of Excellence
+						</h1>
+						<div class="mt-8 flex flex-col sm:flex-row gap-4">
+							<a href="#" class="btn-light rounded-lg sm:hidden">Get a Quote</a>
+							<a href="#" class="btn-outline rounded-lg">Speak to an Expert</a>
+						</div>
+					</div>
+				</div>
+			</section>
+            
+            <!-- Dummy content for scrolling -->
+            <div class="h-screen bg-gray-200 p-10"><p>Scroll down to see the sticky header in action.</p></div>
+		</main>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Custom JS -->
+		<script src="./main.js"></script>
+	</body>
+</html>

@@ -1,37 +1,24 @@
 $(document).ready(function() {
 
-    
-    // ================================================================= //
-    // ============== START: UNIVERSAL HEADER LOGIC ============== //
-    // ================================================================= //
+	// --- Desktop Sticky Header ---
+	const header = $("#main-header");
+	const scrollTrigger = 50; // Pixels to scroll before the header becomes sticky
 
-    // --- Sticky Header ---
-    const header = $('#universal-header');
-    if (header.length) {
-        const scrollThreshold = 10; 
+	$(window).on("scroll", function () {
+		// We only want this behavior on desktop (screens wider than 768px)
+		if ($(window).width() > 768) {
+			if ($(this).scrollTop() > scrollTrigger) {
+				header.addClass("header-scrolled");
+			} else {
+				header.removeClass("header-scrolled");
+			}
+		}
+	});
 
-        $(window).on('scroll', function() {
-            if (window.scrollY > scrollThreshold) {
-                header.addClass('header-is-sticky');
-            } else {
-                header.removeClass('header-is-sticky');
-            }
-        });
-    }
-
-    // --- Mobile Menu Toggle ---
-    const hamburgerButton = $('#hamburger-button');
-    const mobileMenu = $('#mobile-menu');
-
-    if (hamburgerButton.length && mobileMenu.length) {
-        hamburgerButton.on('click', function() {
-            mobileMenu.toggleClass('hidden');
-        });
-    }
-
-    // =============================================================== //
-    // ============== END: UNIVERSAL HEADER LOGIC ============== //
-    // =============================================================== //
+	// --- Mobile Menu Toggle ---
+	$("#mobile-menu-button").on("click", function () {
+		$("#mobile-menu").slideToggle("fast");
+	});
 
       // ================================================================= //
     // ============== START: NUMBER COUNTING ANIMATION CODE ============== //
@@ -219,28 +206,6 @@ const teamSwiper = new Swiper('.team-swiper', {
 // =============================================================== //
 
 
-// ================================================================= //
-// ============== START: STICKY NAVBAR FOR CONTACT PAGE ============== //
-// ================================================================= //
-const navbar = $('#sticky-navbar');
-
-// Check if the sticky navbar element exists on the current page
-if (navbar.length) {
-    // Get the initial top offset of the navbar
-    const stickyPoint = navbar.offset().top;
-
-    $(window).on('scroll', function() {
-        // Compare the window's scroll position to the navbar's original position
-        if (window.pageYOffset > stickyPoint) {
-            navbar.addClass('navbar-sticky');
-        } else {
-            navbar.removeClass('navbar-sticky');
-        }
-    });
-}
-// =============================================================== //
-// ============== END: STICKY NAVBAR FOR CONTACT PAGE ============== //
-// =============================================================== //
 
 
 // ================================================================= //

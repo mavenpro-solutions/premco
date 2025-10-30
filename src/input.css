@@ -14,7 +14,7 @@
   --color-bg-subtle-gray: #f7f8fc;     /* Very light gray-blue for the Testimonials section */
   --color-bg-sustainability: #eef2ff;   /* Light purplish-blue for the Sustainability section */
   --color-bg-faq: #eaf0ff;             /* Light blue for closed FAQ items */
-
+--color-brand-blue: #2a438c;
   --font-family-sans: 'Inter', sans-serif;
   --font-family-serif: 'Playfair Display', serif;
 }
@@ -59,38 +59,31 @@
     @apply bg-bg-faq;
   }
 
-/*
-|--------------------------------------------------------------------------
-| UNIVERSAL HEADER STYLES
-|--------------------------------------------------------------------------
-*/
+	.btn-light {
+		@apply bg-white text-brand-blue font-semibold py-3 px-6 text-center transition-colors duration-300 ease-in-out hover:bg-gray-200;
+	}
+	.btn-outline {
+		@apply border-2 border-white text-white font-semibold py-3 px-6 text-center transition-colors duration-300 ease-in-out hover:bg-white hover:text-brand-blue;
+	}
+	.mobile-menu-link {
+		@apply block text-gray-800 font-medium px-3 py-2 rounded-md hover:bg-brand-blue hover:text-white;
+	}
 
-/* This class is added by JavaScript when you scroll */
-.header-is-sticky {
-  @apply fixed shadow-lg lg:mb-0; /* On sticky, remove negative margin */
-}
+	/* --- Sticky Header Logic --- */
+	/* When scrolled, hide the top logo bar by translating it upwards */
+	#main-header.header-scrolled #top-bar {
+		@apply -translate-y-full;
+	}
 
-/* When sticky, hide the large logo container with a smooth transition */
-.header-is-sticky #logo-container {
-  @apply max-h-0 opacity-0 overflow-hidden;
-}
+	/* When scrolled, make the nav wrapper fixed to the top of the viewport */
+	#main-header.header-scrolled #desktop-nav-wrapper {
+		@apply fixed top-0 w-full mt-0 px-0;
+	}
 
-/* Initially, the sticky-logo is hidden on large screens */
-#sticky-logo {
-  @apply hidden lg:hidden;
-}
-
-/* When the header is sticky, the sticky-logo becomes visible on large screens */
-.header-is-sticky #sticky-logo {
-  @apply lg:block;
-}
-
-/* The sticky-logo is always visible on small screens (the default state) */
-@media (max-width: 1023px) {
-  #sticky-logo {
-    @apply block;
-  }
-}
+	/* When scrolled, restyle the inner nav to be a full-width bar AND center its content */
+	#main-header.header-scrolled #desktop-nav {
+		@apply max-w-none rounded-none mt-0 flex justify-center; /* <-- THE FIX */
+	}
 
 }
 
