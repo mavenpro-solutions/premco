@@ -3,94 +3,138 @@
 @theme {
   /*
   |--------------------------------------------------------------------------
-  | PROJECT DESIGN TOKENS
+  | PROJECT DESIGN TOKENS (Single Source of Truth)
   |--------------------------------------------------------------------------
   */
   --color-brand-primary: #294597;       /* The main dark blue used for hero and stats */
-  --color-brand-accent: #4a69bd;        /* Lighter blue for accented text like "Excellence" */
-  --color-brand-deep: #25499f;          /* A deeper blue used for the checkmark icon background */
+   --color-brand-darkest: #0D1631;       /* The new darker blue for the gradient */
+  --color-brand-accent: #4a69bd;        /* Lighter blue for accented text */
+  --color-brand-deep: #25499f;          /* A deeper blue for checkmark icon backgrounds */
   
-  --color-bg-subtle: #eff3ff;           /* Very light blue for the "Why Choose Premco" section */
-  --color-bg-subtle-gray: #f7f8fc;     /* Very light gray-blue for the Testimonials section */
-  --color-bg-sustainability: #eef2ff;   /* Light purplish-blue for the Sustainability section */
+  --color-bg-subtle: #eff3ff;           /* Very light blue for "Why Choose Premco" section */
+  --color-bg-subtle-gray: #f7f8fc;     /* Very light gray-blue for Testimonials */
+  --color-bg-sustainability: #eef2ff;   /* Light purplish-blue for Sustainability section */
   --color-bg-faq: #eaf0ff;             /* Light blue for closed FAQ items */
---color-brand-blue: #2a438c;
-  --font-family-sans: 'Inter', sans-serif;
+
+   --font-family: 'Jost' , sans-serif;
   --font-family-serif: 'Playfair Display', serif;
 }
 
 
 @layer base {
-  /*
-  |--------------------------------------------------------------------------
-  | BASE STYLES
-  |--------------------------------------------------------------------------
-  */
   body {
     @apply font-sans bg-white;
+    font-family: 'Jost', sans-serif;
   }
 }
 
 
 @layer components {
+
+    @font-face {
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("../assets/fonts/Urbanist-SemiBold.woff") format("woff");
+  }
+
+
   /*
   |--------------------------------------------------------------------------
-  | CUSTOM COMPONENT CLASSES
+  | REUSABLE COMPONENTS
   |--------------------------------------------------------------------------
   */
 
-  /* Background Color Components */
-  .hero-bg-custom-blue {
-    @apply bg-brand-primary;
+  /* --- Buttons (THE FIX IS HERE) --- */
+  /* Base button styles for structure, padding, font, etc. */
+  .btn {
+    @apply inline-block font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out;
   }
-  .bg-subtle-blue {
-    @apply bg-bg-subtle;
+  /* Modifier for a primary button's colors */
+  .btn-primary {
+    @apply bg-white text-brand-primary hover:bg-gray-200;
   }
-  .bg-check-blue {
-    @apply bg-brand-deep;
-  }
-  .bg-subtle-gray-blue {
-    @apply bg-bg-subtle-gray;
-  }
-  .bg-sustainability-section {
-    @apply bg-bg-sustainability;
-  }
-  .bg-faq-blue {
-    @apply bg-bg-faq;
+  /* Modifier for an outline button's colors and border */
+  .btn-outline {
+	@apply border-2 border-white text-white hover:bg-white hover:text-brand-primary;
   }
 
-	.btn-light {
-		@apply bg-white text-brand-blue font-semibold py-3 px-6 text-center transition-colors duration-300 ease-in-out hover:bg-gray-200;
-	}
-	.btn-outline {
-		@apply border-2 border-white text-white font-semibold py-3 px-6 text-center transition-colors duration-300 ease-in-out hover:bg-white hover:text-brand-blue;
-	}
+  /* --- Typography --- */
+  .section-title {
+    @apply text-4xl sm:text-5xl font-bold text-gray-900;
+  }
+  .section-title-accent {
+    @apply font-serif italic text-brand-accent;
+  }
+
+  /* --- Cards --- */
+  .card {
+    @apply bg-white border border-gray-200/80 rounded-2xl p-8 shadow-lg h-full;
+  }
+  .expertise-icon {
+    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-4 rounded-2xl shadow-lg flex-shrink-0;
+  }
+ .info-card {
+    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center gap-3 justify-center min-h-[160px];
+  }
+.stat-card {
+    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg text-left;
+  }
+  .testimonial-card {
+    @apply bg-white rounded-xl shadow-lg p-8 flex flex-col h-full;
+  }
+  .checklist-item {
+    @apply bg-white rounded-full p-4 flex items-center gap-4 shadow-md;
+  }
+  
+  .checklist-icon {
+    @apply bg-brand-deep text-white rounded-full h-6 w-6 flex-shrink-0 flex items-center justify-center;
+  }
+
+  /* --- FAQ --- */
+  .faq-item {
+    @apply bg-bg-faq border border-transparent rounded-xl transition-all duration-300;
+  }
+  .faq-item.active {
+    @apply bg-white shadow-md border-gray-200;
+  }
+  .swiper-nav-button {
+    @apply bg-white/70 hover:bg-white text-gray-600 w-10 h-10 rounded-full shadow-md transition-colors flex items-center justify-center;
+  }
+
+    .value-card {
+    @apply bg-white rounded-2xl p-6 text-center flex flex-col items-center justify-center gap-4 transform hover:-translate-y-2 transition-transform duration-300 shadow-lg min-h-[180px];
+  }
+  .blurb-icon {
+    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-3 rounded-xl shadow-md flex-shrink-0;
+  }
+  .blurb-text {
+    @apply bg-white rounded-xl shadow-md p-4 text-gray-700 font-medium leading-snug;
+  }
+
+    .footer-title {
+    @apply font-semibold text-gray-900 text-lg;
+  }
+  .footer-link {
+    @apply text-gray-600 hover:text-brand-primary transition-colors duration-300;
+  }
+  
+  /* --- Mobile Menu --- */
 	.mobile-menu-link {
-		@apply block text-gray-800 font-medium px-3 py-2 rounded-md hover:bg-brand-blue hover:text-white;
+		@apply block text-gray-800 font-medium px-3 py-2 rounded-md hover:bg-brand-primary hover:text-white;
 	}
 
 	/* --- Sticky Header Logic --- */
-	/* When scrolled, hide the top logo bar by translating it upwards */
 	#main-header.header-scrolled #top-bar {
 		@apply -translate-y-full;
 	}
-
-	/* When scrolled, make the nav wrapper fixed to the top of the viewport */
 	#main-header.header-scrolled #desktop-nav-wrapper {
 		@apply fixed top-0 w-full mt-0 px-0;
 	}
-
-	/* When scrolled, restyle the inner nav to be a full-width bar AND center its content */
+  
 	#main-header.header-scrolled #desktop-nav {
-		@apply max-w-none rounded-none mt-0 flex justify-center; /* <-- THE FIX */
+		@apply fixed top-0 left-0 w-full bg-white shadow-lg border-b border-gray-200;
 	}
-
-}
-
-@layer utilities {
-  /*
-  |--------------------------------------------------------------------------
-  | CUSTOM UTILITY CLASSES
-  |--------------------------------------------------------------------------
-  */
+  
 }

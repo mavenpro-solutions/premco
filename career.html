@@ -1,104 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - PREM CO</title>
-
-    <!-- Google Fonts, CSS links, etc. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Playfair+Display:ital,wght@0;700;1,700&display=swap" rel="stylesheet">
-    <link href="./dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <style>
-      .font-serif { font-family: 'Playfair Display', serif; }
-    </style>
-</head>
-<body class="bg-gray-100">
-
-    <!-- ================================================================= -->
-    <!-- ============== START: UNIVERSAL STICKY HEADER ============== -->
-    <!-- This is the exact same header used on the contact page -->
-    <header id="universal-header" class="bg-white w-full z-50 transition-all duration-300 lg:relative lg:z-50 lg:mb-[-88px]">
-        <div class="container mx-auto px-6">
-            <div id="logo-container" class="hidden lg:flex justify-center py-4 transition-all duration-300">
-                <a href="./index.html" title="PREM CO Home">
-                    <img class="h-16 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO 'Concept to Catenary' Logo" />
-                </a>
-            </div>
-            <div id="nav-bar" class="flex items-center justify-between h-20">
-                <div id="sticky-logo" class="flex-shrink-0">
-                    <a href="./index.html" title="PREM CO Home">
-                        <img class="h-12 w-auto" src="./assets/images/logo/logo.png" alt="PREM CO Logo" />
-                    </a>
-                </div>
-                <nav id="desktop-nav-menu" class="hidden lg:flex w-full justify-center">
-                    <ul class="flex items-center space-x-10 border border-gray-200 rounded-xl shadow-sm px-8 py-3">
-                        <li><a href="./index.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">HOME</a></li>
-                        <li><a href="./about.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">ABOUT US</a></li>
-                        <li><a href="#" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">SERVICES</a></li>
-                        <li><a href="./project.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">PROJECTS</a></li>
-                        <li><a href="./careers.html" class="text-[color:var(--color-brand-primary)] font-semibold text-sm">CAREERS</a></li>
-                        <li><a href="./contact.html" class="text-gray-700 hover:text-[color:var(--color-brand-primary)] text-sm font-semibold">CONTACT US</a></li>
-                    </ul>
-                </nav>
-                <div class="lg:hidden">
-                    <button id="hamburger-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100" aria-label="Main menu">
-                        <i class="ti ti-menu-2 h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PREM CO - Rail Infrastructure & Industrial Construction</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header" class="absolute top-0 left-0 w-full z-50">
+      <!-- Top bar with Logo -->
+      <div id="top-bar" class="bg-white py-4 transition-transform duration-300">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-center">
+            <a href="#" title="PREM CO Logo">
+              <img
+                class="h-12 w-auto"
+                src="assets/images/logo/logo.png"
+                alt="PREM CO"
+              />
+            </a>
+          </div>
         </div>
-        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
-            <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="./index.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">HOME</a>
-                <!-- ... other mobile links -->
-                 <a href="./careers.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 bg-gray-100">CAREERS</a>
-                 <a href="./contact.html" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-50">CONTACT US</a>
-            </div>
+      </div>
+
+      <!-- Main Navigation for Desktop -->
+      <nav
+        id="desktop-nav-wrapper"
+        class="container mx-auto px-4 hidden md:block transition-all duration-300"
+      >
+        <div
+          id="desktop-nav"
+          class="bg-white rounded-md shadow-lg max-w-5xl mx-auto mt-4 transition-all duration-300"
+        >
+          <ul
+            class="flex justify-center items-center space-x-8 text-gray-800 font-semibold py-4"
+          >
+            <li><a href="/" class="hover:text-brand-primary">HOME</a></li>
+            <li><a href="/about.html" class="hover:text-brand-primary">ABOUT US</a></li>
+            <li><a href="/service.html" class="hover:text-brand-primary">SERVICES</a></li>
+            <li><a href="/project.html" class="hover:text-brand-primary">PROJECTS</a></li>
+            <li><a href="/career.html" class="hover:text-brand-primary">CAREERS</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-primary">CONTACT US</a></li>
+          </ul>
         </div>
+      </nav>
+
+      <!-- Mobile Header -->
+      <div
+        id="mobile-header"
+        class="md:hidden bg-white shadow-md p-4 flex items-center justify-between fixed top-0 w-full"
+      >
+        <a href="#" title="PREM CO Logo">
+          <img
+            class="h-10 w-auto"
+            src="assets/images/logo/logo.png"
+            alt="PREM CO"
+          />
+        </a>
+        <button type="button" id="mobile-menu-button" class="p-2">
+          <span class="sr-only">Open main menu</span>
+          <i class="ti ti-menu-2 h-6 w-6"></i>
+        </button>
+      </div>
     </header>
-    <!-- =============================================================== -->
-    <!-- ============== END: UNIVERSAL STICKY HEADER ============== -->
-    <!-- =============================================================== -->
 
-    <!-- A spacer div to prevent content jump when the header becomes sticky -->
-    <div id="header-spacer" class="hidden"></div>
+    <!-- Mobile Menu Panel -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden fixed top-[72px] w-full bg-white z-40 shadow-lg"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="/" class="mobile-menu-link">HOME</a>
+        <a href="/about.html" class="mobile-menu-link">ABOUT US</a>
+        <a href="/service.html" class="mobile-menu-link">SERVICES</a>
+        <a href="/project.html" class="mobile-menu-link">PROJECTS</a>
+        <a href="/career.html" class="mobile-menu-link">CAREERS</a>
+        <a href="/contact.html" class="mobile-menu-link">CONTACT US</a>
+      </div>
+    </div>
 
     <!-- Main Content Area -->
-    <main>
-        <!-- ================================================================= -->
-        <!-- ============== START: CAREERS HERO SECTION ============== -->
-        <!-- ================================================================= -->
-        <div class="px-4 md:px-8">
-            <div class="bg-[color:var(--color-brand-primary)] rounded-2xl overflow-hidden">
-                <section class="pt-32 pb-20 md:pt-36 md:pb-28">
-                    <div class="container mx-auto px-6">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <!-- Left Column: Text -->
-                            <div class="text-white">
+
+            <main class="py-20 mx-2 md:mx-4">
+
+                    <!--  HERO SECTION -->
+            <section class="bg-brand-primary text-white relative overflow-hidden rounded-2xl">
+                <!-- Content Container -->
+                <div class="container mx-auto px-6 py-20 md:py-24 lg:py-56 relative z-10">
+                    <div class="text-white">
                                 <h1 class="text-6xl md:text-7xl font-bold font-serif">Careers at Premco</h1>
                                 <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-md">
                                     Join the team powering India's infrastructure growth.
                                 </p>
                             </div>
+                </div>
 
-                            <!-- Right Column: Image -->
-                            <div class="flex justify-center lg:justify-end">
-                                <!-- IMPORTANT: Replace with the actual path to your illustration -->
-                                <img src="assets/images/career-1.png" alt="Illustration of a construction engineer with a city skyline" class="w-full max-w-sm md:max-w-md">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <!-- =============================================================== -->
-        <!-- ============== END: CAREERS HERO SECTION ============== -->
-        <!-- =============================================================== -->
+                <!-- Decorative Background Illustration -->
+                <div class="absolute inset-0 z-0 opacity-80 pointer-events-none">
+                    <img src="assets/images/career-1.png" alt="Construction site illustration" class="absolute bottom-0 right-0 w-full md:w-3/4 lg:w-2/4 h-auto">
+                </div>
+            </section>
+
 
 <!-- ================================================================= -->
 <!-- ============== START: WHY WORK WITH US SECTION ============== -->
@@ -406,87 +417,91 @@
 
     </main>
 
-    <!-- ================================================================= -->
-    <!-- ============== START: NEW FOOTER SECTION ============== -->
-    <!-- ================================================================= -->
-    <footer class="bg-gray-50">
-        <div class="container mx-auto px-6 py-16">
-            <!-- Top Section Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-                
-                <!-- Column 1: About -->
-                <div class="sm:col-span-2 lg:col-span-1">
-                    <img class="h-24 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
-                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read More</a>
-                    </p>
-                </div>
+<!-- ================================================================= -->
+<!-- ============== START: NEW FOOTER SECTION ============== -->
+<!-- ================================================================= -->
+<footer class="pb-12">
+    <div class="container mx-auto px-6 pb-8">
+      <div class="block lg:hidden py-4">
+                <img class="h-16 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
+                    <a href="#" class="text-brand-primary font-semibold hover:underline">Read More</a>
+                </p>
+            </div>
+        <!-- Top Section Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-8">
+            
+            <!-- Column 1: About -->
+            <div class="hidden lg:block lg:col-span-4">
+                <img class="h-16 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
+                    <a href="#" class="text-brand-primary font-semibold hover:underline">Read More</a>
+                </p>
+            </div>
+          
 
-                <div></div>
-                <!-- Column 2: Quick Links -->
-                <div>
-                    <h3 class="font-semibold text-gray-800">Quick Links</h3>
-                    <ul class="mt-4 space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">About</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Careers</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Services -->
-                <div>
-                    <h3 class="font-semibold text-gray-800">Services</h3>
-                    <ul class="mt-4 space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Rail Infrastructure</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Private Sidings</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Core Infrastructure</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Project Recovery</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: Contact Info -->
-                <div>
-                    <h3 class="font-semibold text-gray-800">Contact Info</h3>
-                    <div class="mt-4 space-y-3 text-gray-600 text-sm">
-                        <p>1 C, Plot No 9, Block Cs, 3rd Floor, Axis Mall, Rajarhat, New Town–700156</p>
-                        <p><a href="mailto:info@premgroup.com" class="hover:text-blue-600">info@premgroup.com</a></p>
-                        <p>
-                            <span class="text-gray-500">Business Enquiry:</span>
-                            <a href="tel:8981078000" class="font-semibold text-gray-700 hover:text-blue-600">8981078000</a>
-                        </p>
-                        <p>
-                            <span class="text-gray-500">Admin Related:</span>
-                             <a href="tel:7439744141" class="font-semibold text-gray-700 hover:text-blue-600">7439744141</a>
-                        </p>
-                    </div>
-                </div>
+            <!-- Column 2: Quick Links -->
+            <div class="lg:col-span-2">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="mt-4 space-y-3">
+                    <li><a href="/about.html" class="footer-link">About</a></li>
+                    <li><a href="/service.html" class="footer-link">Services</a></li>
+                    <li><a href="/project.html" class="footer-link">Projects</a></li>
+                    <li><a href="/career.html" class="footer-link">Careers</a></li>
+                    <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                </ul>
             </div>
 
-            <!-- Bottom Section -->
-            <hr class="my-8 border-gray-200">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-sm text-gray-500 text-center sm:text-left">
-                    © 2025 Premco Rail Engineers Limited. All Rights Reserved.
-                </p>
-                <div class="flex items-center gap-6">
-                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Cookie Consent</a>
+            <!-- Column 3: Services -->
+            <div class="lg:col-span-3">
+                <h3 class="footer-title">Services</h3>
+                <ul class="mt-4 space-y-3">
+                    <li><a href="#" class="footer-link">Rail Infrastructure</a></li>
+                    <li><a href="#" class="footer-link">Private Sidings</a></li>
+                    <li><a href="#" class="footer-link">Core Infrastructure</a></li>
+                    <li><a href="#" class="footer-link">Project Recovery</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="lg:col-span-3">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="mt-4 space-y-3 text-gray-600 text-sm">
+                    <p>1 C, Plot No 9, Block Cs, 3rd Floor, Axis Mall, Rajarhat, New Town–700156</p>
+                    <p><a href="mailto:info@premgroup.com" class="footer-link">info@premgroup.com</a></p>
+                    <p>
+                        <span class="text-gray-500">Business Enquiry:</span>
+                        <a href="tel:8981078000" class="font-semibold text-gray-800 hover:text-brand-primary">8981078000</a>
+                    </p>
+                    <p>
+                        <span class="text-gray-500">Admin Related:</span>
+                         <a href="tel:7439744141" class="font-semibold text-gray-800 hover:text-brand-primary">7439744141</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- =============================================================== -->
-    <!-- ============== END: NEW FOOTER SECTION ============== -->
-    <!-- =============================================================== -->    
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+        <!-- Bottom Section -->
+        <hr class="my-8 border-gray-200">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-500 text-center sm:text-left">
+                © 2025 Premco Rail Engineers Limited. All Rights Reserved.
+            </p>
+            <div class="flex items-center gap-6">
+                <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Privacy Policy</a>
+                <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Cookie Consent</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- =============================================================== -->
+<!-- ============== END: NEW FOOTER SECTION ============== -->
+<!-- =============================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Your Custom JS -->
-    <script src="./js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

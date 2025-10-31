@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - PREM CO</title>
-
-    <!-- Google Fonts, CSS links, etc. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Playfair+Display:ital,wght@0;700;1,700&display=swap" rel="stylesheet">
-    <link href="./dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
-    <style>
-        /* This ensures we can use the serif font from your theme */
-        .font-serif { font-family: 'Playfair Display', serif; }
-    </style>
-</head>
-<body class="bg-white">
-
-    <!-- ================================================================= -->
-    <!-- ============== MODIFIED HEADER SECTION ============== -->
-    <!-- ================================================================= -->
-    <header id="main-header" class="absolute top-0 left-0 right-0 z-50 transition-all duration-300">
-        <!-- Main Logo Container (Centered on Desktop, will be hidden on scroll) -->
-        <div id="main-logo-container" class="relative z-20 flex justify-center py-4 transition-all duration-300">
-             <img class="h-12 w-auto" src="https://i.imgur.com/GCIa5y4.png" alt="PREM CO Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PREM CO - Rail Infrastructure & Industrial Construction</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header" class="absolute top-0 left-0 w-full z-50">
+      <!-- Top bar with Logo -->
+      <div id="top-bar" class="bg-white py-4 transition-transform duration-300">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-center">
+            <a href="#" title="PREM CO Logo">
+              <img
+                class="h-12 w-auto"
+                src="assets/images/logo/logo.png"
+                alt="PREM CO"
+              />
+            </a>
+          </div>
         </div>
-        
-        <!-- Navigation Container -->
-        <div class="container mx-auto px-6 h-20 flex justify-between items-center relative z-10">
-            <!-- Mobile Logo (Only shows when header is NOT sticky) -->
-             <div class="lg:hidden flex-shrink-0">
-                <a href="./index.html" title="PREM CO Home">
-                    <img class="h-10 w-auto" src="https://i.imgur.com/GCIa5y4.png" alt="PREM CO Logo">
-                </a>
-            </div>
+      </div>
 
-            <!-- Desktop Navigation Bar -->
-            <div class="hidden lg:flex flex-grow justify-center absolute left-1/2 -translate-x-1/2 -mt-4">
-                 <!-- STYLES REMOVED FROM HERE: They are now controlled by CSS for the scroll effect -->
-                 <nav id="desktop-nav">
-                    <ul class="flex items-center space-x-8">
-                        <!-- TEXT COLOR CHANGED TO WHITE -->
-                        <li><a href="./index.html" class="text-white hover:text-gray-200 tracking-wider text-sm font-semibold">HOME</a></li>
-                        <li><a href="./about.html" class="text-white hover:text-gray-200 tracking-wider text-sm font-semibold">ABOUT US</a></li>
-                        <li><a href="#" class="text-white hover:text-gray-200 tracking-wider text-sm font-semibold">SERVICES</a></li>
-                        <li><a href="#" class="text-white hover:text-gray-200 tracking-wider text-sm font-semibold">PROJECTS</a></li>
-                        <li><a href="#" class="text-white hover:text-gray-200 tracking-wider text-sm font-semibold">CAREERS</a></li>
-                        <li><a href="#" class="text-white hover:text-gray-200 tracking-wider text-sm font-semibold">CONTACT US</a></li>
-                    </ul>
-                 </nav>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="lg:hidden">
-                <!-- INITIAL TEXT COLOR SET TO BE VISIBLE ON HERO -->
-                <button id="hamburger-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-gray-700/50 focus:outline-none" aria-label="Main menu">
-                    <i class="ti ti-menu-2 h-6 w-6"></i>
-                </button>
-            </div>
+      <!-- Main Navigation for Desktop -->
+      <nav
+        id="desktop-nav-wrapper"
+        class="container mx-auto px-4 hidden md:block transition-all duration-300"
+      >
+        <div
+          id="desktop-nav"
+          class="bg-white rounded-md shadow-lg max-w-5xl mx-auto mt-4 transition-all duration-300"
+        >
+          <ul
+            class="flex justify-center items-center space-x-8 text-gray-800 font-semibold py-4"
+          >
+            <li><a href="/" class="hover:text-brand-primary">HOME</a></li>
+            <li><a href="/about.html" class="hover:text-brand-primary">ABOUT US</a></li>
+            <li><a href="/service.html" class="hover:text-brand-primary">SERVICES</a></li>
+            <li><a href="/project.html" class="hover:text-brand-primary">PROJECTS</a></li>
+            <li><a href="/career.html" class="hover:text-brand-primary">CAREERS</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-primary">CONTACT US</a></li>
+          </ul>
         </div>
+      </nav>
 
-        <!-- Mobile Menu Dropdown (hidden by default) -->
-        <div class="lg:hidden hidden bg-white" id="mobile-menu">
-            <div class="px-4 pt-2 pb-4 space-y-2 border-t">
-                <a href="./index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">HOME</a>
-                <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">ABOUT US</a>
-                <!-- ... other links -->
-            </div>
-        </div>
+      <!-- Mobile Header -->
+      <div
+        id="mobile-header"
+        class="md:hidden bg-white shadow-md p-4 flex items-center justify-between fixed top-0 w-full"
+      >
+        <a href="#" title="PREM CO Logo">
+          <img
+            class="h-10 w-auto"
+            src="assets/images/logo/logo.png"
+            alt="PREM CO"
+          />
+        </a>
+        <button type="button" id="mobile-menu-button" class="p-2">
+          <span class="sr-only">Open main menu</span>
+          <i class="ti ti-menu-2 h-6 w-6"></i>
+        </button>
+      </div>
     </header>
 
+    <!-- Mobile Menu Panel -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden fixed top-[72px] w-full bg-white z-40 shadow-lg"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="/" class="mobile-menu-link">HOME</a>
+        <a href="/about.html" class="mobile-menu-link">ABOUT US</a>
+        <a href="/service.html" class="mobile-menu-link">SERVICES</a>
+        <a href="/project.html" class="mobile-menu-link">PROJECTS</a>
+        <a href="/career.html" class="mobile-menu-link">CAREERS</a>
+        <a href="/contact.html" class="mobile-menu-link">CONTACT US</a>
+      </div>
+    </div>
+
     <!-- Main Content Area with Top Padding to create space for the absolute header -->
-    <main class="pt-24">
+    <main class="py-20 mx-2 md:mx-4">
         <!-- Wrapper div to create the left/right and bottom gaps -->
-        <div class="px-4 pb-4 md:px-8 md:pb-8">
-            <!-- ABOUT US HERO SECTION -->
-            <section class="bg-[color:var(--color-brand-primary)] text-white relative overflow-hidden rounded-2xl">
+
+            <!--  HERO SECTION -->
+            <section class="bg-brand-primary text-white relative overflow-hidden rounded-2xl">
                 <!-- Content Container -->
-                <div class="container mx-auto px-6 py-20 md:py-24 lg:py-32 relative z-10">
+                <div class="container mx-auto px-6 py-20 md:py-24 lg:py-56 relative z-10">
                     <div class="max-w-xl text-center md:text-left">
                         <h1 class="text-5xl md:text-7xl font-bold font-serif">
                             About Us
@@ -96,10 +111,10 @@
 
                 <!-- Decorative Background Illustration -->
                 <div class="absolute inset-0 z-0 opacity-80 pointer-events-none">
-                    <img src="https://i.imgur.com/7vjVuc2.png" alt="Construction site illustration" class="absolute bottom-0 right-0 w-full md:w-3/4 lg:w-2/3 h-auto">
+                    <img src="assets/images/about-banner.png" alt="Construction site illustration" class="absolute bottom-0 right-0 w-full md:w-3/4 lg:w-2/4 h-auto">
                 </div>
             </section>
-        </div>
+
 
         <!-- ================================================================= -->
 <!-- ============== START: COMPANY LEGACY SECTION ============== -->
@@ -219,12 +234,11 @@
 <!-- =============================================================== -->
 
 <!-- ================================================================= -->
-<!-- ============== START: CORE VALUES SECTION ============== -->
+<!-- ============== START: NEW CORE VALUES SECTION ============== -->
 <!-- ================================================================= -->
-<!-- This section is placed outside the main px/pb wrapper to allow the background to go full-width -->
-<section class="bg-[color:var(--color-brand-primary)] py-16 md:py-24 relative">
-    <!-- Optional: Subtle background skyline image -->
-    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('./assets/images/about-3.png');" aria-hidden="true"></div>
+<section class="bg-gradient-to-br from-brand-primary to-brand-darkest py-16 md:py-24 relative">
+    <!-- Subtle background skyline image -->
+    <div class="absolute inset-0 bg-contain bg-no-repeat bg-bottom opacity-10" style="background-image: url('./assets/images/about-3.png');" aria-hidden="true"></div>
 
     <div class="container mx-auto px-6 relative z-10">
         <!-- Section Header -->
@@ -234,64 +248,55 @@
             </h2>
         </div>
 
-        <!-- Responsive Grid for the Values -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            
-            <!-- Value 1: Integrity & Transparency -->
-            <div class="bg-white rounded-2xl p-8 text-center flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
-                <div class="mb-4">
-                    <i class="ti ti-search text-[color:var(--color-brand-deep)] text-5xl"></i>
+        <!-- Wrapper for centering the rows of cards -->
+        <div class="flex flex-col items-center gap-6 md:gap-8">
+            <!-- Top Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Value 1: Integrity & Transparency -->
+                <div class="value-card">
+                    <i class="ti ti-search text-brand-deep text-5xl"></i>
+                    <h3 class="font-semibold text-lg text-brand-deep">Integrity & Transparency</h3>
                 </div>
-                <h3 class="font-semibold text-lg text-[color:var(--color-brand-deep)]">Integrity & Transparency</h3>
+
+                <!-- Value 2: Safety First -->
+                <div class="value-card">
+                    <i class="ti ti-shield-check text-brand-deep text-5xl"></i>
+                    <h3 class="font-semibold text-lg text-brand-deep">Safety First</h3>
+                </div>
+                
+                <!-- Value 3: Sustainability -->
+                <div class="value-card">
+                    <i class="ti ti-leaf text-brand-deep text-5xl"></i>
+                    <h3 class="font-semibold text-lg text-brand-deep">Sustainability</h3>
+                </div>
+
+                <!-- Value 4: Innovation -->
+                <div class="value-card">
+                    <i class="ti ti-bulb text-brand-deep text-5xl"></i>
+                    <h3 class="font-semibold text-lg text-brand-deep">Innovation</h3>
+                </div>
             </div>
 
-            <!-- Value 2: Safety First -->
-            <div class="bg-white rounded-2xl p-8 text-center flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
-                <div class="mb-4">
-                    <i class="ti ti-shield-check text-[color:var(--color-brand-deep)] text-5xl"></i>
+            <!-- Bottom Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                <!-- Value 5: Timely Delivery -->
+                <div class="value-card">
+                    <i class="ti ti-truck-delivery text-brand-deep text-5xl"></i>
+                    <h3 class="font-semibold text-lg text-brand-deep">Timely Delivery</h3>
                 </div>
-                <h3 class="font-semibold text-lg text-[color:var(--color-brand-deep)]">Safety First</h3>
-            </div>
-            
-            <!-- Value 3: Sustainability -->
-            <div class="bg-white rounded-2xl p-8 text-center flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
-                <div class="mb-4">
-                    <i class="ti ti-leaf text-[color:var(--color-brand-deep)] text-5xl"></i>
-                </div>
-                <h3 class="font-semibold text-lg text-[color:var(--color-brand-deep)]">Sustainability</h3>
-            </div>
 
-            <!-- Value 4: Innovation -->
-            <div class="bg-white rounded-2xl p-8 text-center flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
-                <div class="mb-4">
-                    <i class="ti ti-bulb text-[color:var(--color-brand-deep)] text-5xl"></i>
+                <!-- Value 6: Customer-Centric Approach -->
+                <div class="value-card">
+                    <i class="ti ti-users-group text-brand-deep text-5xl"></i>
+                    <h3 class="font-semibold text-lg text-brand-deep">Customer-Centric Approach</h3>
                 </div>
-                <h3 class="font-semibold text-lg text-[color-var(--color-brand-deep)]">Innovation</h3>
             </div>
-
-            <!-- Value 5: Timely Delivery -->
-            <div class="bg-white rounded-2xl p-8 text-center flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
-                <div class="mb-4">
-                    <i class="ti ti-truck-delivery text-[color:var(--color-brand-deep)] text-5xl"></i>
-                </div>
-                <h3 class="font-semibold text-lg text-[color:var(--color-brand-deep)]">Timely Delivery</h3>
-            </div>
-
-            <!-- Value 6: Customer-Centric Approach -->
-            <div class="bg-white rounded-2xl p-8 text-center flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
-                <div class="mb-4">
-                    <i class="ti ti-award text-[color:var(--color-brand-deep)] text-5xl"></i>
-                </div>
-                <h3 class="font-semibold text-lg text-[color:var(--color-brand-deep)]">Customer-Centric Approach</h3>
-            </div>
-
         </div>
     </div>
 </section>
 <!-- =============================================================== -->
-<!-- ============== END: CORE VALUES SECTION ============== -->
+<!-- ============== END: NEW CORE VALUES SECTION ============== -->
 <!-- =============================================================== -->
-
 
 <!-- ================================================================= -->
 <!-- ============== START: OUR TEAM SLIDER SECTION ============== -->
@@ -374,159 +379,174 @@
 <!-- =============================================================== -->
 
 
+
 <!-- ================================================================= -->
-<!-- ============== START: RESPONSIBLE GROWTH SECTION ============== -->
+<!-- ============== START: NEW RESPONSIBLE GROWTH SECTION ============== -->
 <!-- ================================================================= -->
-<section class="relative bg-[color:var(--color-bg-sustainability)] rounded-2xl overflow-hidden py-16 md:py-24">
-    <!-- Decorative Background Shape -->
-    <div class="absolute top-1/2 left-0 w-[45rem] h-[45rem] bg-white/40 rounded-full transform -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+<section class=" py-16 sm:py-48 overflow-hidden">
+    <div class="">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-    <div class="container mx-auto px-6 relative z-10">
-        <!-- Two-Column Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
-            
-            <!-- Left Column: Image -->
-            <div class="flex justify-center">
-                <!-- IMPORTANT: Replace the src="..." with the actual path to your illustration -->
-                <img src="./assets/images/about-4.png" alt="Illustration of a worker laying down railway tracks in a mountainous region" class="rounded-3xl w-full max-w-md lg:max-w-none h-auto object-cover ">
-            </div>
-
-            <!-- Right Column: Text Content -->
-            <div class="max-w-lg lg:max-w-none">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-                    Committed to 
-                    <span class="font-serif italic text-[color:var(--color-brand-primary)]">Responsible Growth</span>
-                </h2>
-
-                <!-- Info Card -->
-                <div class="bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-lg flex items-start gap-5 mt-8">
-                    <!-- Icon -->
-                    <div class="flex-shrink-0 bg-[color:var(--color-brand-deep)] w-14 h-14 rounded-xl flex items-center justify-center shadow-md">
-                        <!-- Using a relevant Tabler Icon -->
-                        <i class="ti ti-building-community text-white text-3xl"></i>
-                    </div>
-                    <!-- Text -->
-                    <div>
-                        <p class="text-gray-700 font-medium">
-                            Community development, workforce safety, and environmental conservation initiatives.
-                        </p>
-                    </div>
+            <!-- Left Column: Image with SVG Background -->
+            <div class="relative flex items-center justify-center min-h-[450px]">
+                <!-- Decorative SVG Background -->
+                <div class="absolute inset-0 z-0 flex items-center justify-center" aria-hidden="true">
+                    <svg class="w-full h-auto " width="702" height="616" viewBox="0 0 702 616" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M702 308C702 478.104 559.382 616 383.453 616H0V0H383.453C559.382 0 702 137.896 702 308Z" fill="url(#paint0_linear_resp_growth)" fill-opacity="0.3"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_resp_growth" x1="897.704" y1="-227.303" x2="605.515" y2="642.733" gradientUnits="userSpaceOnUse">
+                                <stop offset="0.145914" stop-color="#5C78D1"/>
+                                <stop offset="0.755502" stop-color="#E4EBFF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Image Container with blue background -->
+                <div class="relative z-10  p-4 w-full max-w-2xl">
+                    <img src="./assets/images/about-4.png" alt="Illustration of a worker laying down railway tracks" class="w-full h-auto">
                 </div>
             </div>
 
+            <!-- Right Column: Text Content -->
+            <div class="flex flex-col justify-center">
+                <h2 class="section-title">
+                    Committed to 
+                    <span class="section-title-accent">Responsible Growth</span>
+                </h2>
+                <!-- Info Blurb -->
+                <div class="flex items-start gap-4 mt-8">
+                    <!-- Icon -->
+                    <div class="blurb-icon">
+                        <i class="ti ti-building-community text-white text-2xl"></i>
+                    </div>
+                    <!-- Text -->
+                    <div class="blurb-text">
+                        <p>Community development, workforce safety, environmental conservation initiatives</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <!-- =============================================================== -->
-<!-- ============== END: RESPONSIBLE GROWTH SECTION ============== -->
+<!-- ============== END: NEW RESPONSIBLE GROWTH SECTION ============== -->
 <!-- =============================================================== -->
 
-        <!-- ================================================================= -->
-        <!-- ============== START: NEW CALL TO ACTION SECTION ============== -->
-        <!-- ================================================================= -->
-        <section class="py-16 sm:py-24">
-            <div class=" px-6">
-                <div class="relative bg-cover bg-center rounded-2xl text-white overflow-hidden" 
-                     style="background-image: url('./assets/images/footer-banner.jpg');">
-                    
-                    <!-- Gradient Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20"></div>
+<!-- ================================================================= -->
+<!-- ============== START: NEW CALL TO ACTION SECTION ============== -->
+<!-- ================================================================= -->
+<section >
+    <div >
+        <div class="relative bg-cover bg-center rounded-2xl text-white overflow-hidden" 
+             style="background-image: url('./assets/images/footer-banner.jpg');">
+            
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-primary/90 to-brand-darkest/70"></div>
 
-                    <!-- Content -->
-                    <div class="relative z-10 p-8 md:p-12 lg:p-16">
-                        <div class="max-w-lg">
-                            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
-                                Fast-track your stalled rail projects — visible progress within 30 days.
-                            </h2>
-                            <a href="#" class="inline-block bg-white text-blue-900 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-200 transition-colors duration-300 mt-8">
-                                Request a Callback
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- =============================================================== -->
-        <!-- ============== END: NEW CALL TO ACTION SECTION ============== -->
-        <!-- =============================================================== -->
-
-    </main>
-        
-    <!-- Footer Section (no changes) -->
-    <footer class="bg-gray-50">
-        <div class="container mx-auto px-6 py-16">
-            <!-- Top Section Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-                
-                <!-- Column 1: About -->
-                <div class="sm:col-span-2 lg:col-span-1">
-                    <img class="h-24 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
-                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read More</a>
-                    </p>
-                </div>
-
-                <div></div>
-                <!-- Column 2: Quick Links -->
-                <div>
-                    <h3 class="font-semibold text-gray-800">Quick Links</h3>
-                    <ul class="mt-4 space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">About</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Careers</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Services -->
-                <div>
-                    <h3 class="font-semibold text-gray-800">Services</h3>
-                    <ul class="mt-4 space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Rail Infrastructure</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Private Sidings</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Core Infrastructure</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Project Recovery</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: Contact Info -->
-                <div>
-                    <h3 class="font-semibold text-gray-800">Contact Info</h3>
-                    <div class="mt-4 space-y-3 text-gray-600 text-sm">
-                        <p>1 C, Plot No 9, Block Cs, 3rd Floor, Axis Mall, Rajarhat, New Town–700156</p>
-                        <p><a href="mailto:info@premgroup.com" class="hover:text-blue-600">info@premgroup.com</a></p>
-                        <p>
-                            <span class="text-gray-500">Business Enquiry:</span>
-                            <a href="tel:8981078000" class="font-semibold text-gray-700 hover:text-blue-600">8981078000</a>
-                        </p>
-                        <p>
-                            <span class="text-gray-500">Admin Related:</span>
-                             <a href="tel:7439744141" class="font-semibold text-gray-700 hover:text-blue-600">7439744141</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Section -->
-            <hr class="my-8 border-gray-200">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-sm text-gray-500 text-center sm:text-left">
-                    © 2025 Premco Rail Engineers Limited. All Rights Reserved.
-                </p>
-                <div class="flex items-center gap-6">
-                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Cookie Consent</a>
+            <!-- Content -->
+            <div class="relative z-10 p-8 md:p-12 lg:p-16 text-center md:text-left">
+                <div class="max-w-xl">
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                        Fast-track your stalled rail projects — visible progress within 30 days.
+                    </h2>
+                    <a href="#" class="btn btn-primary rounded-full mt-8">
+                        Request a Callback
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
-    
-    <!-- jQuery -->
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: NEW CALL TO ACTION SECTION ============== -->
+<!-- =============================================================== -->
+</main>
+
+<!-- ================================================================= -->
+<!-- ============== START: NEW FOOTER SECTION ============== -->
+<!-- ================================================================= -->
+<footer class="pb-12">
+    <div class="container mx-auto px-6 pb-8">
+      <div class="block lg:hidden py-4">
+                <img class="h-16 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
+                    <a href="#" class="text-brand-primary font-semibold hover:underline">Read More</a>
+                </p>
+            </div>
+        <!-- Top Section Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-8">
+            
+            <!-- Column 1: About -->
+            <div class="hidden lg:block lg:col-span-4">
+                <img class="h-16 w-auto mb-4" src="./assets/images/logo/logo.png" alt="PREM CO Logo">
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Premco Rail Engineers Limited is a trusted name in rail infrastructure and industrial construction across India. With over three decades of proven expertise, we have built a strong legacy of delivering... 
+                    <a href="#" class="text-brand-primary font-semibold hover:underline">Read More</a>
+                </p>
+            </div>
+          
+
+            <!-- Column 2: Quick Links -->
+            <div class="lg:col-span-2">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="mt-4 space-y-3">
+                    <li><a href="/about.html" class="footer-link">About</a></li>
+                    <li><a href="/service.html" class="footer-link">Services</a></li>
+                    <li><a href="/project.html" class="footer-link">Projects</a></li>
+                    <li><a href="/career.html" class="footer-link">Careers</a></li>
+                    <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="lg:col-span-3">
+                <h3 class="footer-title">Services</h3>
+                <ul class="mt-4 space-y-3">
+                    <li><a href="#" class="footer-link">Rail Infrastructure</a></li>
+                    <li><a href="#" class="footer-link">Private Sidings</a></li>
+                    <li><a href="#" class="footer-link">Core Infrastructure</a></li>
+                    <li><a href="#" class="footer-link">Project Recovery</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="lg:col-span-3">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="mt-4 space-y-3 text-gray-600 text-sm">
+                    <p>1 C, Plot No 9, Block Cs, 3rd Floor, Axis Mall, Rajarhat, New Town–700156</p>
+                    <p><a href="mailto:info@premgroup.com" class="footer-link">info@premgroup.com</a></p>
+                    <p>
+                        <span class="text-gray-500">Business Enquiry:</span>
+                        <a href="tel:8981078000" class="font-semibold text-gray-800 hover:text-brand-primary">8981078000</a>
+                    </p>
+                    <p>
+                        <span class="text-gray-500">Admin Related:</span>
+                         <a href="tel:7439744141" class="font-semibold text-gray-800 hover:text-brand-primary">7439744141</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <hr class="my-8 border-gray-200">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-500 text-center sm:text-left">
+                © 2025 Premco Rail Engineers Limited. All Rights Reserved.
+            </p>
+            <div class="flex items-center gap-6">
+                <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Privacy Policy</a>
+                <a href="#" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Cookie Consent</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- =============================================================== -->
+<!-- ============== END: NEW FOOTER SECTION ============== -->
+<!-- =============================================================== -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Your Custom JS -->
-    <script src="./js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

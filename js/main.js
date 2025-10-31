@@ -1,25 +1,38 @@
 $(document).ready(function() {
+ let lastScrollTop = 0;
+    const header = $("#main-header");
+    const scrollTrigger = 100; // The point where the sticky header activates
 
-	// --- Desktop Sticky Header ---
-	const header = $("#main-header");
-	const scrollTrigger = 50; // Pixels to scroll before the header becomes sticky
+    $(window).on("scroll", function() {
+        // We only want this behavior on desktop
+        if ($(window).width() > 768) {
+            let st = $(this).scrollTop();
 
-	$(window).on("scroll", function () {
-		// We only want this behavior on desktop (screens wider than 768px)
-		if ($(window).width() > 768) {
-			if ($(this).scrollTop() > scrollTrigger) {
-				header.addClass("header-scrolled");
-			} else {
-				header.removeClass("header-scrolled");
-			}
-		}
-	});
+            // Check if we've scrolled past the trigger point
+            if (st > scrollTrigger) {
+                header.addClass("header-scrolled");
+
+                // Check scroll direction
+                if (st > lastScrollTop) {
+                    // Scrolling Down: Hide the header
+                    header.addClass("header-hidden");
+                } else {
+                    // Scrolling Up: Show the header
+                    header.removeClass("header-hidden");
+                }
+            } else {
+                // We are near the top of the page
+                header.removeClass("header-scrolled header-hidden");
+            }
+
+            lastScrollTop = st;
+        }
+    });
 
 	// --- Mobile Menu Toggle ---
 	$("#mobile-menu-button").on("click", function () {
 		$("#mobile-menu").slideToggle("fast");
 	});
-
       // ================================================================= //
     // ============== START: NUMBER COUNTING ANIMATION CODE ============== //
     // ================================================================= //
