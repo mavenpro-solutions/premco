@@ -454,6 +454,9 @@
   .h-full {
     height: 100%;
   }
+  .min-h-\[250px\] {
+    min-height: 250px;
+  }
   .min-h-\[400px\] {
     min-height: 400px;
   }
@@ -1092,13 +1095,6 @@
       }
     }
   }
-  .group-hover\:text-brand-primary {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-brand-primary);
-      }
-    }
-  }
   .group-hover\:text-gray-200 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1261,11 +1257,6 @@
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
-  .md\:col-span-2 {
-    @media (width >= 48rem) {
-      grid-column: span 2 / span 2;
-    }
-  }
   .md\:mx-4 {
     @media (width >= 48rem) {
       margin-inline: calc(var(--spacing) * 4);
@@ -1279,6 +1270,11 @@
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
+    }
+  }
+  .md\:min-h-\[400px\] {
+    @media (width >= 48rem) {
+      min-height: 400px;
     }
   }
   .md\:w-3\/4 {
@@ -1374,6 +1370,16 @@
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
+    }
+  }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
+  .lg\:grid {
+    @media (width >= 64rem) {
+      display: grid;
     }
   }
   .lg\:hidden {

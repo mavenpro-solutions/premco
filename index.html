@@ -888,120 +888,76 @@
       </section>
 
       <!-- ================================================================= -->
-      <!-- ============== START: NEW SUSTAINABILITY SECTION ============== -->
-      <!-- ================================================================= -->
-      <section class="py-16 sm:py-24">
-        <div class="">
-          <!-- Section Title -->
-          <div class="text-center mb-12">
+<!-- ============== START: NEW SUSTAINABILITY SECTION ============== -->
+<!-- ================================================================= -->
+<section class="py-16 sm:py-24">
+    <div class="container mx-auto px-6">
+         <!-- Section Title -->
+        <div class="text-center mb-12">
             <h2 class="section-title font-serif">
-              Sustainability & Safety
-              <span class="text-brand-accent">Commitment</span>
+                Sustainability & Safety
+                <span class="text-brand-accent">Commitment</span>
             </h2>
-          </div>
-
-          <!-- Main Content Box -->
-          <div class="bg-bg-sustainability rounded-2xl p-8 md:p-12">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <!-- Left Column: Illustration -->
-              <div>
-                <img
-                  src="./assets/images/ssc-i.png"
-                  alt="Illustration of people planting trees and caring for the environment"
-                />
-              </div>
-
-              <!-- Right Column: Text Slider -->
-              <div
-                class="relative flex items-center justify-center min-h-[400px]"
-              >
-                <!-- Decorative SVG Background -->
-                <div
-                  class="absolute inset-0 z-0 opacity-100"
-                  aria-hidden="true"
-                >
-                  <svg
-                    class="w-full h-full"
-                    width="747"
-                    height="486"
-                    viewBox="0 0 747 486"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 350.5C0 544.076 151.76 701 338.966 701H747V0H338.966C151.76 0 0 156.924 0 350.5Z"
-                      fill="url(#p3)"
-                      fill-opacity="0.3"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="p3"
-                        x1="-208.249"
-                        y1="-258.668"
-                        x2="142.24"
-                        y2="717.21"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0.145914" stop-color="#385DD0" />
-                        <stop offset="0.755502" stop-color="#E3EAFF" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-
-                <!-- Swiper Instance -->
-                <div
-                  class="relative z-10 swiper commitment-swiper max-w-sm mx-auto"
-                >
-                  <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide text-center text-zinc-800">
-                      <p class="text-lg leading-relaxed">
-                        At Premco Rail Engineers Limited, safety and
-                        sustainability are at the heart of everything we do. We
-                        follow strict safety protocols to protect our workforce
-                        and ensure smooth, reliable operations.
-                      </p>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide text-center text-zinc-800">
-                      <p class="text-lg leading-relaxed">
-                        Our commitment extends to environmental stewardship. We
-                        actively seek eco-friendly solutions in our projects,
-                        minimizing our footprint and building a greener future
-                        for generations to come.
-                      </p>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide text-center text-zinc-800">
-                      <p class="text-lg leading-relaxed">
-                        By integrating sustainable practices with rigorous
-                        safety standards, we deliver projects that are not only
-                        efficient and durable but also responsible and
-                        forward-thinking.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Custom Navigation -->
-                <button
-                  class="commitment-swiper-prev swiper-nav-button absolute left-0 z-20"
-                >
-                  <i class="ti ti-arrow-left"></i>
-                </button>
-                <button
-                  class="commitment-swiper-next swiper-nav-button absolute right-0 z-20"
-                >
-                  <i class="ti ti-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <!-- =============================================================== -->
-      <!-- ============== END: NEW SUSTAINABILITY SECTION ============== -->
-      <!-- =============================================================== -->
+
+        <!-- Main Content Box -->
+        <div class="bg-bg-sustainability rounded-2xl p-8 md:p-12">
+            <!-- On mobile, this is a flex-col stack. On desktop, it becomes a grid. -->
+            <div class="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center">
+                
+                <!-- Left Column: Illustration -->
+                <div class="w-full">
+                     <img src="./assets/images/ssc-i.png" alt="Illustration of people planting trees and caring for the environment" class="w-full h-auto">
+                </div>
+
+                <!-- Right Column: Text Slider and its navigation -->
+                <div class="w-full">
+                    <!-- This container holds the slider and the DESKTOP buttons -->
+                    <div class="relative flex items-center justify-center md:min-h-[400px]">
+                        <!-- Decorative SVG Background -->
+                        <div class="absolute inset-0 z-0" aria-hidden="true">
+                            <svg class="w-full h-full" width="747" height="486" viewBox="0 0 747 486" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 350.5C0 544.076 151.76 701 338.966 701H747V0H338.966C151.76 0 0 156.924 0 350.5Z" fill="url(#p3)" fill-opacity="0.3"/>
+                                <defs><linearGradient id="p3" x1="-208.249" y1="-258.668" x2="142.24" y2="717.21" gradientUnits="userSpaceOnUse"><stop offset="0.145914" stop-color="#385DD0"/><stop offset="0.755502" stop-color="#E3EAFF"/></linearGradient></defs>
+                            </svg>
+                        </div>
+
+                        <!-- Swiper Instance -->
+                        <div class="relative z-10 swiper commitment-swiper max-w-sm mx-auto">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide text-center text-zinc-800"><p class="text-lg leading-relaxed">At Premco Rail Engineers Limited, safety and sustainability are at the heart of everything we do. We follow strict safety protocols to protect our workforce and ensure smooth, reliable operations.</p></div>
+                                <div class="swiper-slide text-center text-zinc-800"><p class="text-lg leading-relaxed">Our commitment extends to environmental stewardship. We actively seek eco-friendly solutions in our projects, minimizing our footprint and building a greener future.</p></div>
+                                <div class="swiper-slide text-center text-zinc-800"><p class="text-lg leading-relaxed">By integrating sustainable practices with rigorous safety standards, we deliver projects that are not only efficient and durable but also responsible and forward-thinking.</p></div>
+                            </div>
+                        </div>
+
+                        <!-- DESKTOP ONLY Navigation (Absolute positioned) -->
+                        <button class="commitment-swiper-prev swiper-nav-button absolute left-0 z-20 hidden lg:flex">
+                            <i class="ti ti-arrow-left"></i>
+                        </button>
+                        <button class="commitment-swiper-next swiper-nav-button absolute right-0 z-20 hidden lg:flex">
+                            <i class="ti ti-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- MOBILE ONLY Navigation (Flexbox centered) -->
+                    <div class="flex lg:hidden justify-center items-center gap-4 mt-8">
+                        <button class="commitment-swiper-prev swiper-nav-button">
+                            <i class="ti ti-arrow-left"></i>
+                        </button>
+                        <button class="commitment-swiper-next swiper-nav-button bg-white">
+                            <i class="ti ti-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =============================================================== -->
+<!-- ============== END: NEW SUSTAINABILITY SECTION ============== -->
+<!-- =============================================================== -->
 
       <!-- FAQ SECTION -->
       <!-- <section class="py-16 sm:py-24">
