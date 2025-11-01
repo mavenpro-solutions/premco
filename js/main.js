@@ -125,6 +125,10 @@ const testimonialSwiper = new Swiper('.testimonial-swiper', {
             slidesPerView: 3,
         }
     },
+    autoplay: {
+        delay: 3000, // Change slide every 3 seconds
+        disableOnInteraction: false,
+    },
 
     // Custom Navigation
     navigation: {
@@ -145,7 +149,7 @@ const commitmentSwiper = new Swiper('.commitment-swiper', {
         crossFade: true
     },
     autoplay: {
-        delay: 5000, // Change slide every 5 seconds
+        delay: 3000, // Change slide every 3 seconds
         disableOnInteraction: false,
     },
     // Custom Navigation
@@ -206,6 +210,10 @@ const teamSwiper = new Swiper('.team-swiper', {
         1024: {
             slidesPerView: 3,
         }
+    },
+    autoplay: {
+        delay: 3000, // Change slide every 3 seconds
+        disableOnInteraction: false,
     },
 
     // Custom Navigation

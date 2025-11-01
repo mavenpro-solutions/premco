@@ -10,7 +10,7 @@
    --color-brand-darkest: #0D1631;       /* The new darker blue for the gradient */
   --color-brand-accent: #4a69bd;        /* Lighter blue for accented text */
   --color-brand-deep: #25499f;          /* A deeper blue for checkmark icon backgrounds */
-  
+  --color-light-blue: #5580FF2B;            /* Light blue background  */
   --color-bg-subtle: #eff3ff;           /* Very light blue for "Why Choose Premco" section */
   --color-bg-subtle-gray: #f7f8fc;     /* Very light gray-blue for Testimonials */
   --color-bg-sustainability: #eef2ff;   /* Light purplish-blue for Sustainability section */
@@ -76,10 +76,10 @@
     @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-4 rounded-2xl shadow-lg flex-shrink-0;
   }
  .info-card {
-    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center gap-3 justify-center min-h-[160px];
+    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center gap-3 justify-center min-h-[160px] transform hover:-translate-y-2 transition-transform duration-300;
   }
 .stat-card {
-    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg text-left;
+    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg text-left min-h-[160px] flex flex-col justify-center;
   }
   .testimonial-card {
     @apply bg-white rounded-xl shadow-lg p-8 flex flex-col h-full;
@@ -90,6 +90,10 @@
   
   .checklist-icon {
     @apply bg-brand-deep text-white rounded-full h-6 w-6 flex-shrink-0 flex items-center justify-center;
+  }
+
+   .expertise-card {
+    @apply bg-white border border-gray-200/80 rounded-2xl p-8 shadow-lg h-full transition-colors duration-300 ease-in-out;
   }
 
   /* --- FAQ --- */
@@ -120,6 +124,26 @@
     @apply text-gray-600 hover:text-brand-primary transition-colors duration-300;
   }
   
+/* This class only contains the color styles. The `.btn` class must be used in the HTML. */
+  .btn-dark {
+    @apply bg-brand-primary text-white hover:bg-brand-deep;
+  }
+  
+  /* This class only contains Tailwind styles. The 'ti' classes must be in the HTML. */
+  .feature-item {
+    @apply bg-bg-subtle rounded-lg p-5 flex items-center gap-4;
+  }
+  .feature-icon {
+    @apply flex-shrink-0 text-2xl text-brand-deep;
+  }
+  .feature-card {
+    @apply bg-white border border-zinc-100 rounded-xl p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center gap-4;
+  }
+
+  .feature-card-title {
+    @apply font-semibold text-zinc-700;
+  }
+
   /* --- Mobile Menu --- */
 	.mobile-menu-link {
 		@apply block text-gray-800 font-medium px-3 py-2 rounded-md hover:bg-brand-primary hover:text-white;
