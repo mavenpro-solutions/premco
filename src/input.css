@@ -82,7 +82,7 @@
     @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg text-left min-h-[160px] flex flex-col justify-center;
   }
   .testimonial-card {
-    @apply bg-white rounded-xl shadow-lg p-8 flex flex-col h-full;
+    @apply bg-white rounded-xl shadow-lg p-8 flex flex-col h-full border border-zinc-100;
   }
   .checklist-item {
     @apply bg-white rounded-full p-4 flex items-center gap-4 shadow-md;
@@ -158,7 +158,7 @@
 	}
   
 	#main-header.header-scrolled #desktop-nav {
-		@apply fixed top-0 left-0 w-full bg-white shadow-lg border-b border-gray-200;
+		@apply fixed top-4 left-1/2 w-full max-w-5xl -translate-x-1/2 rounded-md shadow-lg;
 	}
   
 }
