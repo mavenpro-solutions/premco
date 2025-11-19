@@ -225,9 +225,22 @@ const teamSwiper = new Swiper('.team-swiper', {
 // =============================================================== //
 // ============== END: TEAM SLIDER CODE ============== //
 // =============================================================== //
-
-
-
+// --- Initialize Swiper for Client Logos ---
+const clientLogoSwiper = new Swiper('.client-logo-slider', {
+    loop: true,
+    spaceBetween: 48, // Increased space for better visual separation
+    // More logos are visible at each breakpoint to accommodate the larger number
+    breakpoints: {
+        320: { slidesPerView: 3 },
+        640: { slidesPerView: 4 },
+        768: { slidesPerView: 5 },
+        1024: { slidesPerView: 7 },
+    },
+    autoplay: {
+        delay: 2000, // Slightly faster autoplay for a dynamic feel
+        disableOnInteraction: false,
+    },
+});
 
 // ================================================================= //
 // ============== START: CUSTOM FILE UPLOAD LOGIC ============== //

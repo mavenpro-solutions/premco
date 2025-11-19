@@ -16,7 +16,7 @@
   --color-bg-sustainability: #eef2ff;   /* Light purplish-blue for Sustainability section */
   --color-bg-faq: #eaf0ff;             /* Light blue for closed FAQ items */
 
-   --font-family: 'Jost' , sans-serif;
+   --font-family: 'Urbanist' , sans-serif;
   --font-family-serif: 'Playfair Display', serif;
 }
 
@@ -24,7 +24,7 @@
 @layer base {
   body {
     @apply font-sans bg-white;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Urbanist', sans-serif;
   }
 }
 
@@ -32,7 +32,7 @@
 @layer components {
 
     @font-face {
-    font-family: Jost;
+    font-family: Urbanist;
     font-style: normal;
     font-weight: 200 700;
     font-display: swap;
@@ -65,7 +65,7 @@
     @apply text-4xl sm:text-5xl font-bold text-gray-900;
   }
   .section-title-accent {
-    @apply font-serif italic text-brand-accent;
+    @apply text-brand-accent;
   }
 
   /* --- Cards --- */
@@ -73,17 +73,24 @@
     @apply bg-white border border-gray-200/80 rounded-2xl p-8 shadow-lg h-full;
   }
   .expertise-icon {
-    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-4 rounded-2xl shadow-lg flex-shrink-0;
+    @apply bg-brand-primary text-white p-4 rounded-2xl shadow-lg flex-shrink-0;
   }
  .info-card {
-    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center gap-3 justify-center min-h-[160px] transform hover:-translate-y-2 transition-transform duration-300;
+    @apply bg-brand-primary text-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center gap-3 justify-center min-h-[160px] transform hover:-translate-y-2 transition-transform duration-300;
   }
 .stat-card {
-    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-6 rounded-2xl shadow-lg text-left min-h-[160px] flex flex-col justify-center;
+    @apply bg-brand-primary text-white p-6 rounded-2xl shadow-lg text-left min-h-[160px] flex flex-col justify-center;
   }
-  .testimonial-card {
-    @apply bg-white rounded-xl shadow-lg p-8 flex flex-col h-full border border-zinc-100;
+.testimonial-card {
+    /* This now only centers the content, with no background or padding */
+    @apply flex items-center justify-center h-20; 
   }
+
+  .client-logo-img {
+     /* Ensures the square logo fits perfectly within the slide without being stretched */
+     @apply max-h-full w-auto object-contain;
+  }
+
   .checklist-item {
     @apply bg-white rounded-full p-4 flex items-center gap-4 shadow-md;
   }
@@ -111,7 +118,7 @@
     @apply bg-white rounded-2xl p-6 text-center flex flex-col items-center justify-center gap-4 transform hover:-translate-y-2 transition-transform duration-300 shadow-lg min-h-[180px];
   }
   .blurb-icon {
-    @apply bg-gradient-to-br from-brand-primary to-brand-darkest text-white p-3 rounded-xl shadow-md flex-shrink-0;
+    @apply bg-brand-primary text-white p-3 rounded-xl shadow-md flex-shrink-0;
   }
   .blurb-text {
     @apply bg-white rounded-xl shadow-md p-4 text-gray-700 font-medium leading-snug;
@@ -144,6 +151,26 @@
     @apply font-semibold text-zinc-700;
   }
 
+    /* --- ADD THESE NEW STYLES FOR THE PROJECT CARDS --- */
+  .project-card {
+    @apply bg-brand-primary text-white p-8 rounded-2xl shadow-lg flex flex-col gap-6;
+  }
+  .project-card-title {
+    @apply text-xl font-bold border-b border-white/20 pb-4;
+  }
+  .project-card-details {
+    @apply flex flex-col gap-4;
+  }
+  .project-card-label {
+    @apply text-xs text-gray-300/80;
+  }
+  .project-card-text {
+    @apply text-white/90 leading-relaxed;
+  }
+  .project-card-value {
+    @apply font-semibold text-lg;
+  }
+
   /* --- Mobile Menu --- */
 	.mobile-menu-link {
 		@apply block text-gray-800 font-medium px-3 py-2 rounded-md hover:bg-brand-primary hover:text-white;
@@ -158,7 +185,7 @@
 	}
   
 	#main-header.header-scrolled #desktop-nav {
-		@apply fixed top-4 left-1/2 w-full max-w-5xl -translate-x-1/2 rounded-md shadow-lg ;
+		@apply fixed top-4 left-1/2 w-full max-w-5xl -translate-x-1/2 rounded-md shadow-lg bg-white/75 backdrop-blur-md;
 	}
   
 }
